@@ -1,0 +1,223 @@
+{
+  "backend": "http",
+  "benchmark": "b4b5-checkpoint-ddp-r0-http",
+  "environment": {
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "bucket": "checkpoints",
+    "chunk_mib": 512,
+    "concurrency": 8,
+    "device": "cuda:0",
+    "endpoints": [
+      "aistor1:9000",
+      "aistor2:9000"
+    ],
+    "repeats": 3,
+    "resnet50": false,
+    "sizes_gib": [
+      4.0
+    ]
+  },
+  "rdma_witness": {},
+  "results": {
+    "rows": [
+      {
+        "backend": "http",
+        "meta": {
+          "target_bytes": 4294967296
+        },
+        "method": "flat",
+        "save": {
+          "bytes": 4295016448,
+          "cpu_cores_median": 37.597,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 4295016448,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.07131,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 18.256,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.0053436229936778545,
+              "manifest_bytes": 18304,
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 0.8370268371115418,
+              "total_s": 5.1116697450052015,
+              "upload_s": 5.106326122011524,
+              "upload_threads": 8,
+              "wall_s": 5.1312768689967925
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 4295016448,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.14779,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 37.835,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.008891671008314006,
+              "manifest_bytes": 18304,
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 0.9745514838943679,
+              "total_s": 4.394504626005073,
+              "upload_s": 4.385612954996759,
+              "upload_threads": 8,
+              "wall_s": 4.40717244699772
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 4295016448,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.14686,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 37.597,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.008199711999623105,
+              "manifest_bytes": 18304,
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 1.0236886209826261,
+              "total_s": 4.184911348987953,
+              "upload_s": 4.17671163698833,
+              "upload_threads": 8,
+              "wall_s": 4.195627811001032
+            }
+          ],
+          "throughput_gbps_best": 1.0236886209826261,
+          "throughput_gbps_median": 0.9745514838943679,
+          "wall_s_max": 5.1312768689967925,
+          "wall_s_median": 4.40717244699772,
+          "wall_s_min": 4.195627811001032
+        },
+        "workload": "synthetic-4gib"
+      }
+    ]
+  },
+  "timestamp": "2026-08-19T01:14:11+0000"
+}

@@ -1,0 +1,50 @@
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+== B1 fetch throughput | backend=rdma ==
+   endpoint(s): ['aistor1:9000', 'aistor2:9000']
+   sizes: [1, 4, 16, 64, 256] MiB   concurrency: [1, 4, 8, 16, 32, 64]
+   preparing 1 MiB objects
+    writing 64 object(s) of 1 MiB
+   preparing 4 MiB objects
+    writing 64 object(s) of 4 MiB
+   preparing 16 MiB objects
+   preparing 64 MiB objects
+    writing 64 object(s) of 64 MiB
+   preparing 256 MiB objects
+    writing 64 object(s) of 256 MiB
+
+    size  conc     GB/s     ops/s    p50 ms    p99 ms   cores  GB/s/core
+------------------------------------------------------------------------
+      1M     1     0.22     210.4      4.66      5.17     0.7       0.33
+      1M     4     0.54     517.4      7.21     10.31     1.7       0.32
+      1M     8     0.58     556.2     13.76     20.72     1.8       0.32
+      1M    16     0.46     435.4     36.37     49.03     2.2       0.21
+      1M    32     0.37     357.4     85.23    138.21     2.5       0.15
+      1M    64     0.38     360.6    172.44    279.72     3.0       0.13
+      4M     1     0.48     114.1      8.65      9.49     0.4       1.29
+      4M     4     1.59     378.3      9.73     12.81     1.4       1.13
+      4M     8     2.38     567.9     13.55     20.20     1.9       1.27
+      4M    16     1.74     414.1     37.53     55.80     2.1       0.82
+      4M    32     1.50     357.3     87.07    136.15     2.7       0.55
+      4M    64     1.52     361.2    172.05    284.49     3.2       0.47
+     16M     1     1.15      68.5     14.32     15.42     0.2       5.10
+     16M     4     4.13     246.2     16.04     19.28     0.8       5.09
+     16M     8     6.79     404.6     17.87     26.57     1.6       4.28
+     16M    16     6.74     401.6     36.85     53.82     2.1       3.17
+     16M    32     6.19     369.2     84.37    139.27     2.5       2.44
+     16M    64     6.18     368.4    169.17    279.25     3.5       1.76
+     64M     1     1.90      28.4     34.98     36.14     0.2      10.12
+     64M     4     6.60      98.3     40.11     42.74     0.5      13.48
+     64M     8    11.13     165.8     46.35     56.57     0.8      14.05
+     64M    16    14.79     220.3     65.86     91.42     1.4      10.94
+     64M    32    21.89     326.2     88.73    144.88     2.0      10.92
+     64M    64    23.28     346.9    169.90    270.16     2.3      10.22
+    256M     1     8.21      30.6     32.73     33.17     0.2      40.52
+    256M     4    20.96      78.1     51.28     53.66     0.4      58.77
+    256M     8    23.15      86.2     77.04    244.52     0.4      51.62
+    256M    16    30.13     112.2    106.06    320.76     0.6      47.76
+    256M    32    40.79     152.0    194.02    308.04     0.9      46.44
+    256M    64    42.39     157.9    383.13    541.95     1.0      44.42
+
+peak: 42.39 GB/s at 256 MiB x 64
+saved: results/b1-fetch-dual-node-rdma-20260818-230027.json

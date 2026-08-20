@@ -1,0 +1,328 @@
+{
+  "backend": "rdma,http,download-then-load,local-then-load",
+  "benchmark": "b8-weights-llama8b",
+  "environment": {
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "bucket": "model-weights",
+    "concurrency": 8,
+    "device": "cuda:0",
+    "endpoints": [
+      "aistor1:9000",
+      "aistor2:9000"
+    ],
+    "model": "llama-3.1-8b-instruct",
+    "repeats": 3,
+    "shard_bytes": [
+      4999802720,
+      4976698672,
+      4915916176,
+      1168138808
+    ],
+    "window_mib": 1024
+  },
+  "rdma_witness": {},
+  "results": {
+    "rows": [
+      {
+        "backend": "rdma",
+        "cores_median": 0.117,
+        "gbps_median": 20.84679338819191,
+        "runs": [
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.0005,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 0.127,
+            "gbps": 20.390303669334976,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 16060522496.0,
+              "rdma_read_ops": 17.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 4,
+            "wall_s": 0.7876548950152937,
+            "windows_total": 17
+          },
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.00042,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 0.108,
+            "gbps": 21.61208571292506,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 16060522496.0,
+              "rdma_read_ops": 17.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 4,
+            "wall_s": 0.7431269109947607,
+            "windows_total": 17
+          },
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.00046,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 0.117,
+            "gbps": 20.84679338819191,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 16060522496.0,
+              "rdma_read_ops": 17.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 4,
+            "wall_s": 0.7704073330096435,
+            "windows_total": 17
+          }
+        ],
+        "verified": {
+          "mismatched": [],
+          "ok": true,
+          "tensors_checked": 17
+        },
+        "wall_s_max": 0.7876548950152937,
+        "wall_s_median": 0.7704073330096435,
+        "wall_s_min": 0.7431269109947607
+      },
+      {
+        "backend": "http",
+        "cores_median": 2.623,
+        "gbps_median": 5.536300205346645,
+        "runs": [
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.00911,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 2.333,
+            "gbps": 3.494876760257392,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 0.0,
+              "rdma_read_ops": 0.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 4,
+            "wall_s": 4.595447450003121,
+            "windows_total": 17
+          },
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.01072,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 2.744,
+            "gbps": 5.554667846930841,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 0.0,
+              "rdma_read_ops": 0.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 4,
+            "wall_s": 2.8913560519868042,
+            "windows_total": 17
+          },
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.01024,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 2.623,
+            "gbps": 5.536300205346645,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 0.0,
+              "rdma_read_ops": 0.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 4,
+            "wall_s": 2.900948630005587,
+            "windows_total": 17
+          }
+        ],
+        "verified": {
+          "mismatched": [],
+          "ok": true,
+          "tensors_checked": 17
+        },
+        "wall_s_max": 4.595447450003121,
+        "wall_s_median": 2.900948630005587,
+        "wall_s_min": 2.8913560519868042
+      },
+      {
+        "backend": "download-then-load",
+        "cores_median": 1.031,
+        "gbps_median": 0.5186691441468694,
+        "runs": [
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.00403,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 1.031,
+            "download_s": 28.23612982899067,
+            "gbps": 0.5186691441468694,
+            "load_s": 2.728733697993448,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "shards": 4,
+            "wall_s": 30.964869757997803
+          },
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.00404,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 1.033,
+            "download_s": 28.408616698987316,
+            "gbps": 0.5159425663637713,
+            "load_s": 2.719887372019002,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "shards": 4,
+            "wall_s": 31.128508370980853
+          },
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.00402,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 1.028,
+            "download_s": 27.934912719996646,
+            "gbps": 0.5251040940206212,
+            "load_s": 2.6504910190124065,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "shards": 4,
+            "wall_s": 30.585407120001037
+          }
+        ],
+        "verified": {
+          "mismatched": [],
+          "ok": true,
+          "tensors_checked": 17
+        },
+        "wall_s_max": 31.128508370980853,
+        "wall_s_median": 30.964869757997803,
+        "wall_s_min": 30.585407120001037
+      },
+      {
+        "backend": "local-then-load",
+        "cores_median": 1.012,
+        "gbps_median": 7.012475794953358,
+        "runs": [
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.00395,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 1.011,
+            "gbps": 7.092263737179499,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "shards": 4,
+            "wall_s": 2.264512867986923
+          },
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.00395,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 1.012,
+            "gbps": 6.972561664784707,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "shards": 4,
+            "wall_s": 2.303389094013255
+          },
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.00396,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 1.013,
+            "gbps": 7.012475794953358,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "shards": 4,
+            "wall_s": 2.2902784930192865
+          }
+        ],
+        "verified": {
+          "mismatched": [],
+          "ok": true,
+          "tensors_checked": 17
+        },
+        "wall_s_max": 2.303389094013255,
+        "wall_s_median": 2.2902784930192865,
+        "wall_s_min": 2.264512867986923
+      }
+    ]
+  },
+  "timestamp": "2026-08-19T18:59:41+0000"
+}

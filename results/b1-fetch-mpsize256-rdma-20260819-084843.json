@@ -1,0 +1,163 @@
+{
+  "backend": "rdma",
+  "benchmark": "b1-fetch-mpsize256",
+  "environment": {
+    "cpu_count": 256,
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "bucket": "bench-fetch",
+    "concurrency": [
+      8
+    ],
+    "device": "cuda:0",
+    "endpoints": [
+      "aistor1:9000",
+      "aistor2:9000"
+    ],
+    "http_parts": 8,
+    "http_threads": 32,
+    "iters_per_stream": 8,
+    "objects_per_size": 16,
+    "processes": 8,
+    "sizes_mib": [
+      256
+    ]
+  },
+  "rdma_witness": {},
+  "results": {
+    "cells": [
+      {
+        "bytes": 137438953472,
+        "concurrency": 8,
+        "cpu_busy_fraction": 0.01133,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 2.9,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "gb_per_cpu_core": 0.9010492459799669,
+        "gpu_bytes_per_device": {
+          "cuda:0": 2147483648,
+          "cuda:1": 2147483648,
+          "cuda:2": 2147483648,
+          "cuda:3": 2147483648,
+          "cuda:4": 2147483648,
+          "cuda:5": 2147483648,
+          "cuda:6": 2147483648,
+          "cuda:7": 2147483648
+        },
+        "iters_per_stream": 8,
+        "latency": {
+          "max_ms": 4462.134225002956,
+          "mean_ms": 3442.1706321231227,
+          "min_ms": 2285.7151569915004,
+          "p50_ms": 3438.664785004221,
+          "p90_ms": 4006.621519016335,
+          "p99_ms": 4316.007796005579
+        },
+        "nic_rx_bytes_delta": {
+          "enp157s0np0.rx_bytes": 22106,
+          "enp27s0np0.rx_bytes": 625717
+        },
+        "ops": 512,
+        "ops_per_s": 9.73415875255837,
+        "processes": 8,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 154618822656.0,
+          "rdma_read_ops": 576.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "size_bytes": 268435456,
+        "throughput_gbps_bytes": 2.6129933435193973,
+        "throughput_gbps_steady": 4.7918871043330755,
+        "wall_s": 52.59827921600663,
+        "worker_wall_s": [
+          27.87228696598322,
+          28.68159254998318,
+          27.835937807016307,
+          27.77974408402224,
+          27.83609606898972,
+          27.920135088992538,
+          27.83115830400493,
+          27.79387489100918
+        ]
+      }
+    ],
+    "failures": 0,
+    "peak_cell": {
+      "concurrency": 8,
+      "size_bytes": 268435456
+    },
+    "peak_gbps_bytes": 2.6129933435193973
+  },
+  "timestamp": "2026-08-19T08:48:43+0000"
+}

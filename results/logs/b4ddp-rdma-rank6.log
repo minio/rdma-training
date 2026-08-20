@@ -1,0 +1,10 @@
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+== B4/B5 checkpoint save/restore ==
+   endpoints: ['aistor1:9000', 'aistor2:9000']   device: cuda:6   repeats: 3
+
+            workload  backend      method     GiB   save s  save GB/s   load s  load GB/s  cores   ok
+-----------------------------------------------------------------------------------------------------
+      synthetic-4gib     rdma        flat    4.00     1.35       3.17        -          -    0.7    -
+
+saved: results/b4b5-checkpoint-ddp-r6-rdma-rdma-20260819-011345.json

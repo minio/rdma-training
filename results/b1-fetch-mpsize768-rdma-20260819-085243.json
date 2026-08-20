@@ -1,0 +1,161 @@
+{
+  "backend": "rdma",
+  "benchmark": "b1-fetch-mpsize768",
+  "environment": {
+    "cpu_count": 256,
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "bucket": "bench-fetch",
+    "concurrency": [
+      8
+    ],
+    "device": "cuda:0",
+    "endpoints": [
+      "aistor1:9000",
+      "aistor2:9000"
+    ],
+    "http_parts": 8,
+    "http_threads": 32,
+    "iters_per_stream": 8,
+    "objects_per_size": 16,
+    "processes": 8,
+    "sizes_mib": [
+      768
+    ]
+  },
+  "rdma_witness": {},
+  "results": {
+    "cells": [
+      {
+        "bytes": 412316860416,
+        "concurrency": 8,
+        "cpu_busy_fraction": 0.01662,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 4.256,
+        "error": "rdma-not-used",
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "gb_per_cpu_core": 0.41200262577016367,
+        "gpu_bytes_per_device": {
+          "cuda:0": 6442450944,
+          "cuda:1": 6442450944,
+          "cuda:2": 6442450944,
+          "cuda:3": 6442450944,
+          "cuda:4": 6442450944,
+          "cuda:5": 6442450944,
+          "cuda:6": 6442450944,
+          "cuda:7": 6442450944
+        },
+        "iters_per_stream": 8,
+        "latency": {
+          "max_ms": 36316.80916500045,
+          "mean_ms": 22088.611764075893,
+          "min_ms": 1277.9377510014456,
+          "p50_ms": 25320.09044502047,
+          "p90_ms": 33610.87452297215,
+          "p99_ms": 35689.72845800454
+        },
+        "nic_rx_bytes_delta": {
+          "enp157s0np0.rx_bytes": 101564,
+          "enp27s0np0.rx_bytes": 329344117471
+        },
+        "ops": 512,
+        "ops_per_s": 2.177257856387048,
+        "processes": 8,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 136902082560.0,
+          "rdma_read_ops": 170.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "size_bytes": 805306368,
+        "throughput_gbps_bytes": 1.7533596165265193,
+        "throughput_gbps_steady": 2.1643878765821305,
+        "wall_s": 235.1581823430024,
+        "worker_wall_s": [
+          190.50044812998385,
+          190.1270307030063,
+          190.244670487009,
+          187.23890205199132,
+          190.48940436600242,
+          190.30686079498264,
+          190.00430411600973,
+          189.75841347602545
+        ]
+      }
+    ],
+    "failures": 1,
+    "peak_cell": null,
+    "peak_gbps_bytes": null
+  },
+  "timestamp": "2026-08-19T08:52:43+0000"
+}

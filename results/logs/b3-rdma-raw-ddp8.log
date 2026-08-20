@@ -1,0 +1,110 @@
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+W0819 00:31:53.633000 183645 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] 
+W0819 00:31:53.633000 183645 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] *****************************************
+W0819 00:31:53.633000 183645 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0819 00:31:53.633000 183645 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] *****************************************
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+W0819 00:32:30.297000 183645 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 183751 closing signal SIGTERM
+W0819 00:32:30.299000 183645 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 183753 closing signal SIGTERM
+W0819 00:32:30.299000 183645 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 183754 closing signal SIGTERM
+W0819 00:32:30.300000 183645 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 183755 closing signal SIGTERM
+W0819 00:32:30.301000 183645 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 183756 closing signal SIGTERM
+W0819 00:32:30.302000 183645 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 183757 closing signal SIGTERM
+W0819 00:32:30.303000 183645 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 183758 closing signal SIGTERM
+E0819 00:32:35.025000 183645 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1002] failed (exitcode: -11) local_rank: 1 (pid: 183752) of binary: /home/minio/ai-training/.venv/bin/python
+Traceback (most recent call last):
+  File "/home/minio/ai-training/.venv/bin/torchrun", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 367, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 1028, in main
+    run(args)
+  File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 1019, in run
+    elastic_launch(
+  File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 194, in __call__
+    return launch_agent(
+           ^^^^^^^^^^^^^
+  File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 383, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+========================================================
+s3rdma_train.train_resnet50 FAILED
+--------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-08-19_00:32:35
+  host      : gpu-4
+  rank      : 0 (local_rank: 0)
+  exitcode  : -11 (pid: 183751)  (SIGSEGV)
+  error_file: <N/A>
+  traceback : Signal 11 (SIGSEGV) received by PID 183751
+[2]:
+  time      : 2026-08-19_00:32:35
+  host      : gpu-4
+  rank      : 2 (local_rank: 2)
+  exitcode  : -15 (pid: 183753)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 183753
+[3]:
+  time      : 2026-08-19_00:32:35
+  host      : gpu-4
+  rank      : 3 (local_rank: 3)
+  exitcode  : -15 (pid: 183754)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 183754
+[4]:
+  time      : 2026-08-19_00:32:35
+  host      : gpu-4
+  rank      : 4 (local_rank: 4)
+  exitcode  : -15 (pid: 183755)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 183755
+[5]:
+  time      : 2026-08-19_00:32:35
+  host      : gpu-4
+  rank      : 5 (local_rank: 5)
+  exitcode  : -15 (pid: 183756)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 183756
+[6]:
+  time      : 2026-08-19_00:32:35
+  host      : gpu-4
+  rank      : 6 (local_rank: 6)
+  exitcode  : -15 (pid: 183757)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 183757
+[7]:
+  time      : 2026-08-19_00:32:35
+  host      : gpu-4
+  rank      : 7 (local_rank: 7)
+  exitcode  : -15 (pid: 183758)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 183758
+--------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-08-19_00:32:30
+  host      : gpu-4
+  rank      : 1 (local_rank: 1)
+  exitcode  : -11 (pid: 183752)  (SIGSEGV)
+  error_file: <N/A>
+  traceback : Signal 11 (SIGSEGV) received by PID 183752
+========================================================

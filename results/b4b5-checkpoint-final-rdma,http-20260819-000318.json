@@ -1,0 +1,4105 @@
+{
+  "backend": "rdma,http",
+  "benchmark": "b4b5-checkpoint-final",
+  "environment": {
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "bucket": "checkpoints",
+    "chunk_mib": 512,
+    "concurrency": 32,
+    "device": "cuda:0",
+    "endpoints": [
+      "aistor1:9000",
+      "aistor2:9000"
+    ],
+    "repeats": 3,
+    "resnet50": true,
+    "sizes_gib": [
+      1.0,
+      4.0,
+      16.0,
+      32.0
+    ]
+  },
+  "rdma_witness": {},
+  "results": {
+    "rows": [
+      {
+        "backend": "rdma",
+        "load": {
+          "bytes": 204707328,
+          "cpu_cores_median": 0.33,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 204707328,
+              "cpu_busy_fraction": 0.00129,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.33,
+              "download_s": 0.023902927991002798,
+              "download_threads": 1,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 204707328.0,
+                "rdma_read_ops": 1.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.002675256007933058,
+              "throughput_gbps": 6.854826928019743,
+              "total_s": 0.026578183998935856,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 481
+              },
+              "wall_s": 0.02986323799996171
+            },
+            {
+              "bytes": 204707328,
+              "cpu_busy_fraction": 0.00126,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.322,
+              "download_s": 0.024732778998441063,
+              "download_threads": 1,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 204707328.0,
+                "rdma_read_ops": 1.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.0026608049956848845,
+              "throughput_gbps": 6.688443179000396,
+              "total_s": 0.027393583994125947,
+              "wall_s": 0.030606125001213513
+            },
+            {
+              "bytes": 204707328,
+              "cpu_busy_fraction": 0.00131,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.335,
+              "download_s": 0.023637247999431565,
+              "download_threads": 1,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 204707328.0,
+                "rdma_read_ops": 1.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.0026592209906084463,
+              "throughput_gbps": 6.962094030832932,
+              "total_s": 0.02629646899004001,
+              "wall_s": 0.02940312599821482
+            }
+          ],
+          "throughput_gbps_best": 6.962094030832932,
+          "throughput_gbps_median": 6.854826928019743,
+          "wall_s_max": 0.030606125001213513,
+          "wall_s_median": 0.02986323799996171,
+          "wall_s_min": 0.02940312599821482
+        },
+        "meta": {
+          "bytes": 204707328,
+          "parameters": 25557032
+        },
+        "method": "flat",
+        "save": {
+          "bytes": 204707328,
+          "cpu_cores_median": 0.245,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 204707328,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00096,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.245,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.013899783007218502,
+              "manifest_bytes": 65192,
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 204707328.0,
+                "rdma_write_ops": 1.0
+              },
+              "throughput_gbps": 1.6859228040842684,
+              "total_s": 0.11222754399932455,
+              "upload_s": 0.09832776099210605,
+              "upload_threads": 1,
+              "wall_s": 0.12142153098830022
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 204707328,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00125,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.022327329992549494,
+              "manifest_bytes": 65192,
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 204707328.0,
+                "rdma_write_ops": 1.0
+              },
+              "throughput_gbps": 1.649949187934159,
+              "total_s": 0.11895649200596381,
+              "upload_s": 0.09662916201341432,
+              "upload_threads": 1,
+              "wall_s": 0.12406886799726635
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 204707328,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00037,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.094,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.006537123001180589,
+              "manifest_bytes": 65192,
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 204707328.0,
+                "rdma_write_ops": 1.0
+              },
+              "throughput_gbps": 1.9260793446363056,
+              "total_s": 0.1013296720047947,
+              "upload_s": 0.09479254900361411,
+              "upload_threads": 1,
+              "wall_s": 0.10628187700058334
+            }
+          ],
+          "throughput_gbps_best": 1.9260793446363056,
+          "throughput_gbps_median": 1.6859228040842684,
+          "wall_s_max": 0.12406886799726635,
+          "wall_s_median": 0.12142153098830022,
+          "wall_s_min": 0.10628187700058334
+        },
+        "workload": "resnet50"
+      },
+      {
+        "backend": "http",
+        "load": {
+          "bytes": 204707328,
+          "cpu_cores_median": 1.981,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 204707328,
+              "cpu_busy_fraction": 0.00731,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.871,
+              "download_s": 0.05550567099999171,
+              "download_threads": 1,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.009615825998480432,
+              "throughput_gbps": 2.990687534327593,
+              "total_s": 0.06512149699847214,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 481
+              },
+              "wall_s": 0.06844824999279808
+            },
+            {
+              "bytes": 204707328,
+              "cpu_busy_fraction": 0.00963,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 2.465,
+              "download_s": 0.07284419301140588,
+              "download_threads": 1,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.005293860987876542,
+              "throughput_gbps": 2.434149116293852,
+              "total_s": 0.07813805399928242,
+              "wall_s": 0.0840981050132541
+            },
+            {
+              "bytes": 204707328,
+              "cpu_busy_fraction": 0.00774,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.981,
+              "download_s": 0.07450857300136704,
+              "download_threads": 1,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.009119107009610161,
+              "throughput_gbps": 2.2781611534772863,
+              "total_s": 0.0836276800109772,
+              "wall_s": 0.0898563860100694
+            }
+          ],
+          "throughput_gbps_best": 2.990687534327593,
+          "throughput_gbps_median": 2.434149116293852,
+          "wall_s_max": 0.0898563860100694,
+          "wall_s_median": 0.0840981050132541,
+          "wall_s_min": 0.06844824999279808
+        },
+        "meta": {
+          "bytes": 204707328,
+          "parameters": 25557032
+        },
+        "method": "flat",
+        "save": {
+          "bytes": 204707328,
+          "cpu_cores_median": 1.33,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 204707328,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00415,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.062,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.006793931999709457,
+              "manifest_bytes": 65192,
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 0.35058898458955856,
+              "total_s": 0.5759656479931436,
+              "upload_s": 0.5691717159934342,
+              "upload_threads": 1,
+              "wall_s": 0.5838954930077307
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 204707328,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.0052,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.33,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.0235805060074199,
+              "manifest_bytes": 65192,
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 0.37361774095671585,
+              "total_s": 0.5393567700084532,
+              "upload_s": 0.5157762640010333,
+              "upload_threads": 1,
+              "wall_s": 0.5479058019991498
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 204707328,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00521,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.333,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.021918857004493475,
+              "manifest_bytes": 65192,
+              "num_chunks": 1,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 0.38499462698054276,
+              "total_s": 0.5229321460064966,
+              "upload_s": 0.5010132890020031,
+              "upload_threads": 1,
+              "wall_s": 0.5317147660098271
+            }
+          ],
+          "throughput_gbps_best": 0.38499462698054276,
+          "throughput_gbps_median": 0.37361774095671585,
+          "wall_s_max": 0.5838954930077307,
+          "wall_s_median": 0.5479058019991498,
+          "wall_s_min": 0.5317147660098271
+        },
+        "workload": "resnet50"
+      },
+      {
+        "backend": "http",
+        "load": {
+          "bytes": 204822397,
+          "cpu_cores_median": 0.953,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 204822397,
+              "cpu_busy_fraction": 0.0037,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.947,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.6468856649270387,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 481
+              },
+              "wall_s": 0.31662843699450605
+            },
+            {
+              "bytes": 204822397,
+              "cpu_busy_fraction": 0.00387,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.992,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.6160477125449237,
+              "wall_s": 0.332478138996521
+            },
+            {
+              "bytes": 204822397,
+              "cpu_busy_fraction": 0.00372,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.953,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.574436768090713,
+              "wall_s": 0.35656212898902595
+            }
+          ],
+          "throughput_gbps_best": 0.6468856649270387,
+          "throughput_gbps_median": 0.6160477125449237,
+          "wall_s_max": 0.35656212898902595,
+          "wall_s_median": 0.332478138996521,
+          "wall_s_min": 0.31662843699450605
+        },
+        "meta": {
+          "bytes": 204707328,
+          "parameters": 25557032
+        },
+        "method": "torch-save",
+        "save": {
+          "bytes": 204822397,
+          "cpu_cores_median": 1.216,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 204822397,
+              "cpu_busy_fraction": 0.00488,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.249,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 0.23595116200158373,
+              "throughput_gbps": 0.2813408864014526,
+              "total_s": 0.7216164970013779,
+              "upload_s": 0.48566533499979414,
+              "wall_s": 0.728022149996832
+            },
+            {
+              "bytes": 204822397,
+              "cpu_busy_fraction": 0.00475,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.216,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 0.20470747000945266,
+              "throughput_gbps": 0.3074343092146252,
+              "total_s": 0.6598388910206268,
+              "upload_s": 0.4551314210111741,
+              "wall_s": 0.6662314220011467
+            },
+            {
+              "bytes": 204822397,
+              "cpu_busy_fraction": 0.004,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.025,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 0.1954281880025519,
+              "throughput_gbps": 0.3332976509520652,
+              "total_s": 0.6085688409948489,
+              "upload_s": 0.41314065299229696,
+              "wall_s": 0.6145329749997472
+            }
+          ],
+          "throughput_gbps_best": 0.3332976509520652,
+          "throughput_gbps_median": 0.3074343092146252,
+          "wall_s_max": 0.728022149996832,
+          "wall_s_median": 0.6662314220011467,
+          "wall_s_min": 0.6145329749997472
+        },
+        "workload": "resnet50"
+      },
+      {
+        "backend": "rdma",
+        "load": {
+          "bytes": 1073774592,
+          "cpu_cores_median": 0.29,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 1073774592,
+              "cpu_busy_fraction": 0.00113,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.29,
+              "download_s": 0.058261797996237874,
+              "download_threads": 3,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 1073774592.0,
+                "rdma_read_ops": 3.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.005029122999985702,
+              "throughput_gbps": 15.862662549984835,
+              "total_s": 0.06329092099622358,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 0.06769195200467948
+            },
+            {
+              "bytes": 1073774592,
+              "cpu_busy_fraction": 0.00063,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.161,
+              "download_s": 0.055985759987379424,
+              "download_threads": 3,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 1073774592.0,
+                "rdma_read_ops": 3.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.0028750749916071072,
+              "throughput_gbps": 17.382669336353775,
+              "total_s": 0.05886083497898653,
+              "wall_s": 0.061772710003424436
+            },
+            {
+              "bytes": 1073774592,
+              "cpu_busy_fraction": 0.00173,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.443,
+              "download_s": 0.059304270005668513,
+              "download_threads": 3,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 1073774592.0,
+                "rdma_read_ops": 3.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.0027253380103502423,
+              "throughput_gbps": 16.154416890336325,
+              "total_s": 0.062029608016018756,
+              "wall_s": 0.06646941200597212
+            }
+          ],
+          "throughput_gbps_best": 17.382669336353775,
+          "throughput_gbps_median": 16.154416890336325,
+          "wall_s_max": 0.06769195200467948,
+          "wall_s_median": 0.06646941200597212,
+          "wall_s_min": 0.061772710003424436
+        },
+        "meta": {
+          "target_bytes": 1073741824
+        },
+        "method": "flat",
+        "save": {
+          "bytes": 1073774592,
+          "cpu_cores_median": 0.106,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 1073774592,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00041,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.106,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.0029405999957816675,
+              "manifest_bytes": 17982,
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 1073774592.0,
+                "rdma_write_ops": 3.0
+              },
+              "throughput_gbps": 5.712373548016796,
+              "total_s": 0.18225764299859293,
+              "upload_s": 0.17931704300281126,
+              "upload_threads": 3,
+              "wall_s": 0.18797345498751383
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 1073774592,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00041,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.105,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.002141091987141408,
+              "manifest_bytes": 17982,
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 1073774592.0,
+                "rdma_write_ops": 3.0
+              },
+              "throughput_gbps": 5.667435891487301,
+              "total_s": 0.18549304199405015,
+              "upload_s": 0.18335195000690874,
+              "upload_threads": 3,
+              "wall_s": 0.18946391499775928
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 1073774592,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00042,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.107,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.006569350996869616,
+              "manifest_bytes": 17982,
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 1073774592.0,
+                "rdma_write_ops": 3.0
+              },
+              "throughput_gbps": 5.773785568687471,
+              "total_s": 0.18017474700172897,
+              "upload_s": 0.17360539600485936,
+              "upload_threads": 3,
+              "wall_s": 0.18597410299116746
+            }
+          ],
+          "throughput_gbps_best": 5.773785568687471,
+          "throughput_gbps_median": 5.712373548016796,
+          "wall_s_max": 0.18946391499775928,
+          "wall_s_median": 0.18797345498751383,
+          "wall_s_min": 0.18597410299116746
+        },
+        "workload": "synthetic-1gib"
+      },
+      {
+        "backend": "http",
+        "load": {
+          "bytes": 1073774592,
+          "cpu_cores_median": 2.904,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 1073774592,
+              "cpu_busy_fraction": 0.0114,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 2.92,
+              "download_s": 0.283445742999902,
+              "download_threads": 3,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.006465056998422369,
+              "throughput_gbps": 3.6482998532829196,
+              "total_s": 0.28991079999832436,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 0.294321912995656
+            },
+            {
+              "bytes": 1073774592,
+              "cpu_busy_fraction": 0.01134,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 2.904,
+              "download_s": 0.2776565660024062,
+              "download_threads": 3,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.006668294008704834,
+              "throughput_gbps": 3.7172830182385637,
+              "total_s": 0.284324860011111,
+              "wall_s": 0.28886005900858436
+            },
+            {
+              "bytes": 1073774592,
+              "cpu_busy_fraction": 0.01076,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 2.754,
+              "download_s": 0.2937598089920357,
+              "download_threads": 3,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.006563009999808855,
+              "throughput_gbps": 3.522825551230602,
+              "total_s": 0.30032281899184454,
+              "wall_s": 0.3048049289936898
+            }
+          ],
+          "throughput_gbps_best": 3.7172830182385637,
+          "throughput_gbps_median": 3.6482998532829196,
+          "wall_s_max": 0.3048049289936898,
+          "wall_s_median": 0.294321912995656,
+          "wall_s_min": 0.28886005900858436
+        },
+        "meta": {
+          "target_bytes": 1073741824
+        },
+        "method": "flat",
+        "save": {
+          "bytes": 1073774592,
+          "cpu_cores_median": 2.868,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 1073774592,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00627,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.606,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.008340318003320135,
+              "manifest_bytes": 17982,
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 0.695245917332081,
+              "total_s": 1.5350989589933306,
+              "upload_s": 1.5267586409900105,
+              "upload_threads": 3,
+              "wall_s": 1.544452926988015
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 1073774592,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.01125,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 2.88,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.006738772994140163,
+              "manifest_bytes": 17982,
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 0.8160728290344298,
+              "total_s": 1.309527123987209,
+              "upload_s": 1.3027883509930689,
+              "upload_threads": 3,
+              "wall_s": 1.3157828000112204
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 1073774592,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.0112,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 2.868,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.006621014996198937,
+              "manifest_bytes": 17982,
+              "num_chunks": 3,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 0.8146003376549955,
+              "total_s": 1.3121445279975887,
+              "upload_s": 1.3055235130013898,
+              "upload_threads": 3,
+              "wall_s": 1.3181612409971422
+            }
+          ],
+          "throughput_gbps_best": 0.8160728290344298,
+          "throughput_gbps_median": 0.8146003376549955,
+          "wall_s_max": 1.544452926988015,
+          "wall_s_median": 1.3181612409971422,
+          "wall_s_min": 1.3157828000112204
+        },
+        "workload": "synthetic-1gib"
+      },
+      {
+        "backend": "http",
+        "load": {
+          "bytes": 1073777727,
+          "cpu_cores_median": 0.922,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 1073777727,
+              "cpu_busy_fraction": 0.00369,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.945,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.6501038243011686,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 1.6517019080056343
+            },
+            {
+              "bytes": 1073777727,
+              "cpu_busy_fraction": 0.00359,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.919,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.6166856949688558,
+              "wall_s": 1.7412074509920785
+            },
+            {
+              "bytes": 1073777727,
+              "cpu_busy_fraction": 0.0036,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.922,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.6342168990165216,
+              "wall_s": 1.6930764990102034
+            }
+          ],
+          "throughput_gbps_best": 0.6501038243011686,
+          "throughput_gbps_median": 0.6342168990165216,
+          "wall_s_max": 1.7412074509920785,
+          "wall_s_median": 1.6930764990102034,
+          "wall_s_min": 1.6517019080056343
+        },
+        "meta": {
+          "target_bytes": 1073741824
+        },
+        "method": "torch-save",
+        "save": {
+          "bytes": 1073777727,
+          "cpu_cores_median": 1.196,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 1073777727,
+              "cpu_busy_fraction": 0.00553,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.415,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 0.9067209110071417,
+              "throughput_gbps": 0.3164306000974596,
+              "total_s": 3.3459164290106855,
+              "upload_s": 2.439195518003544,
+              "wall_s": 3.3934067270020023
+            },
+            {
+              "bytes": 1073777727,
+              "cpu_busy_fraction": 0.00467,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.196,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 0.8725610270048492,
+              "throughput_gbps": 0.3413651307585493,
+              "total_s": 3.1008810630009975,
+              "upload_s": 2.2283200359961484,
+              "wall_s": 3.1455401569983223
+            },
+            {
+              "bytes": 1073777727,
+              "cpu_busy_fraction": 0.00445,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.138,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 0.8520217909972416,
+              "throughput_gbps": 0.3511438094296256,
+              "total_s": 3.00315794099879,
+              "upload_s": 2.1511361500015482,
+              "wall_s": 3.057942922998336
+            }
+          ],
+          "throughput_gbps_best": 0.3511438094296256,
+          "throughput_gbps_median": 0.3413651307585493,
+          "wall_s_max": 3.3934067270020023,
+          "wall_s_median": 3.1455401569983223,
+          "wall_s_min": 3.057942922998336
+        },
+        "workload": "synthetic-1gib"
+      },
+      {
+        "backend": "rdma",
+        "load": {
+          "bytes": 4295016448,
+          "cpu_cores_median": 0.277,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 4295016448,
+              "cpu_busy_fraction": 0.00108,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.277,
+              "download_s": 0.1362821030052146,
+              "download_threads": 9,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 4295016448.0,
+                "rdma_read_ops": 9.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.0025951749994419515,
+              "throughput_gbps": 29.95578081933788,
+              "total_s": 0.13887727800465655,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 0.14337855100166053
+            },
+            {
+              "bytes": 4295016448,
+              "cpu_busy_fraction": 0.00106,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.27,
+              "download_s": 0.13977755799714942,
+              "download_threads": 9,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 4295016448.0,
+                "rdma_read_ops": 9.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.0025726099993335083,
+              "throughput_gbps": 29.24650311675645,
+              "total_s": 0.14235016799648292,
+              "wall_s": 0.1468557259941008
+            },
+            {
+              "bytes": 4295016448,
+              "cpu_busy_fraction": 0.00128,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.329,
+              "download_s": 0.1440347629977623,
+              "download_threads": 9,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 4295016448.0,
+                "rdma_read_ops": 9.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.002562736000982113,
+              "throughput_gbps": 28.437381649936846,
+              "total_s": 0.1465974989987444,
+              "wall_s": 0.15103417399222963
+            }
+          ],
+          "throughput_gbps_best": 29.95578081933788,
+          "throughput_gbps_median": 29.24650311675645,
+          "wall_s_max": 0.15103417399222963,
+          "wall_s_median": 0.1468557259941008,
+          "wall_s_min": 0.14337855100166053
+        },
+        "meta": {
+          "target_bytes": 4294967296
+        },
+        "method": "flat",
+        "save": {
+          "bytes": 4295016448,
+          "cpu_cores_median": 0.201,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 4295016448,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00095,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.243,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.004161629010923207,
+              "manifest_bytes": 18304,
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 4295016448.0,
+                "rdma_write_ops": 9.0
+              },
+              "throughput_gbps": 17.39261854819346,
+              "total_s": 0.2409998580114916,
+              "upload_s": 0.2368382290005684,
+              "upload_threads": 9,
+              "wall_s": 0.2469447850016877
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 4295016448,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00064,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.165,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.0032204610033659264,
+              "manifest_bytes": 18304,
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 4295016448.0,
+                "rdma_write_ops": 9.0
+              },
+              "throughput_gbps": 17.716681174629052,
+              "total_s": 0.23808774699864443,
+              "upload_s": 0.2348672859952785,
+              "upload_threads": 9,
+              "wall_s": 0.24242782300279941
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 4295016448,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00078,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.201,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.0031999290076782927,
+              "manifest_bytes": 18304,
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 4295016448.0,
+                "rdma_write_ops": 9.0
+              },
+              "throughput_gbps": 17.26862913142947,
+              "total_s": 0.24460500900750048,
+              "upload_s": 0.2414050799998222,
+              "upload_threads": 9,
+              "wall_s": 0.2487178579904139
+            }
+          ],
+          "throughput_gbps_best": 17.716681174629052,
+          "throughput_gbps_median": 17.39261854819346,
+          "wall_s_max": 0.2487178579904139,
+          "wall_s_median": 0.2469447850016877,
+          "wall_s_min": 0.24242782300279941
+        },
+        "workload": "synthetic-4gib"
+      },
+      {
+        "backend": "http",
+        "load": {
+          "bytes": 4295016448,
+          "cpu_cores_median": 3.056,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 4295016448,
+              "cpu_busy_fraction": 0.01194,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 3.056,
+              "download_s": 1.2953092259995174,
+              "download_threads": 9,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.011564264001208358,
+              "throughput_gbps": 3.2790450714584076,
+              "total_s": 1.3068734900007257,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 1.3098375760018826
+            },
+            {
+              "bytes": 4295016448,
+              "cpu_busy_fraction": 0.0113,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 2.892,
+              "download_s": 1.3062410290003754,
+              "download_threads": 9,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.010257636997266673,
+              "throughput_gbps": 3.2513935765865893,
+              "total_s": 1.316498665997642,
+              "wall_s": 1.3209770969988313
+            },
+            {
+              "bytes": 4295016448,
+              "cpu_busy_fraction": 0.0123,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 3.149,
+              "download_s": 1.3106478630070342,
+              "download_threads": 9,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.01208736200351268,
+              "throughput_gbps": 3.235732265338592,
+              "total_s": 1.3227352250105469,
+              "wall_s": 1.3273707760090474
+            }
+          ],
+          "throughput_gbps_best": 3.2790450714584076,
+          "throughput_gbps_median": 3.2513935765865893,
+          "wall_s_max": 1.3273707760090474,
+          "wall_s_median": 1.3209770969988313,
+          "wall_s_min": 1.3098375760018826
+        },
+        "meta": {
+          "target_bytes": 4294967296
+        },
+        "method": "flat",
+        "save": {
+          "bytes": 4295016448,
+          "cpu_cores_median": 5.453,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 4295016448,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.01671,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 4.278,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.011307449996820651,
+              "manifest_bytes": 18304,
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 1.0346128078613357,
+              "total_s": 4.142367619002471,
+              "upload_s": 4.13106016900565,
+              "upload_threads": 9,
+              "wall_s": 4.15132735199586
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 4295016448,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.02193,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 5.613,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.0068519490014296025,
+              "manifest_bytes": 18304,
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 1.4999219142600846,
+              "total_s": 2.8572612429998117,
+              "upload_s": 2.850409293998382,
+              "upload_threads": 9,
+              "wall_s": 2.863493363998714
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 4295016448,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.0213,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 5.453,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.006821380011388101,
+              "manifest_bytes": 18304,
+              "num_chunks": 9,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 1.4660544607386827,
+              "total_s": 2.9171103730186587,
+              "upload_s": 2.9102889930072706,
+              "upload_threads": 9,
+              "wall_s": 2.929643176990794
+            }
+          ],
+          "throughput_gbps_best": 1.4999219142600846,
+          "throughput_gbps_median": 1.4660544607386827,
+          "wall_s_max": 4.15132735199586,
+          "wall_s_median": 2.929643176990794,
+          "wall_s_min": 2.863493363998714
+        },
+        "workload": "synthetic-4gib"
+      },
+      {
+        "backend": "http",
+        "load": {
+          "bytes": 4295005279,
+          "cpu_cores_median": 0.97,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 4295005279,
+              "cpu_busy_fraction": 0.00364,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.933,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.539709312069348,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 7.957997357007116
+            },
+            {
+              "bytes": 4295005279,
+              "cpu_busy_fraction": 0.00393,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.006,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.5455387858572871,
+              "wall_s": 7.872960439010058
+            },
+            {
+              "bytes": 4295005279,
+              "cpu_busy_fraction": 0.00379,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.97,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.5466070309074089,
+              "wall_s": 7.857574155001203
+            }
+          ],
+          "throughput_gbps_best": 0.5466070309074089,
+          "throughput_gbps_median": 0.5455387858572871,
+          "wall_s_max": 7.957997357007116,
+          "wall_s_median": 7.872960439010058,
+          "wall_s_min": 7.857574155001203
+        },
+        "meta": {
+          "target_bytes": 4294967296
+        },
+        "method": "torch-save",
+        "save": {
+          "bytes": 4295005279,
+          "cpu_cores_median": 1.377,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 4295005279,
+              "cpu_busy_fraction": 0.00538,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.377,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 4.998372866990394,
+              "throughput_gbps": 0.28005371196937123,
+              "total_s": 15.149452070982079,
+              "upload_s": 10.151079203991685,
+              "wall_s": 15.336362617003033
+            },
+            {
+              "bytes": 4295005279,
+              "cpu_busy_fraction": 0.00529,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.355,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 4.965002593991812,
+              "throughput_gbps": 0.2894469839339503,
+              "total_s": 14.695310973998858,
+              "upload_s": 9.730308380007045,
+              "wall_s": 14.838659642002312
+            },
+            {
+              "bytes": 4295005279,
+              "cpu_busy_fraction": 0.00547,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.4,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 4.925468714995077,
+              "throughput_gbps": 0.28691685720663096,
+              "total_s": 14.82629845199699,
+              "upload_s": 9.900829737001914,
+              "wall_s": 14.969511798000894
+            }
+          ],
+          "throughput_gbps_best": 0.2894469839339503,
+          "throughput_gbps_median": 0.28691685720663096,
+          "wall_s_max": 15.336362617003033,
+          "wall_s_median": 14.969511798000894,
+          "wall_s_min": 14.838659642002312
+        },
+        "workload": "synthetic-4gib"
+      },
+      {
+        "backend": "rdma",
+        "load": {
+          "bytes": 17179918336,
+          "cpu_cores_median": 0.304,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 17179918336,
+              "cpu_busy_fraction": 0.00109,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.28,
+              "download_s": 0.4971444199909456,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 17179918336.0,
+                "rdma_read_ops": 33.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.0008217690046876669,
+              "throughput_gbps": 34.32141199744199,
+              "total_s": 0.4979661889956333,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 0.5005597770068562
+            },
+            {
+              "bytes": 17179918336,
+              "cpu_busy_fraction": 0.00129,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.33,
+              "download_s": 0.5118437639903277,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 17179918336.0,
+                "rdma_read_ops": 33.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.0008157910051522776,
+              "throughput_gbps": 33.35090237227529,
+              "total_s": 0.51265955499548,
+              "wall_s": 0.515126041995245
+            },
+            {
+              "bytes": 17179918336,
+              "cpu_busy_fraction": 0.00119,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.304,
+              "download_s": 0.48476728099922184,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 17179918336.0,
+                "rdma_read_ops": 33.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.002727386003243737,
+              "throughput_gbps": 34.92215609333653,
+              "total_s": 0.4874946670024656,
+              "wall_s": 0.4919489589956356
+            }
+          ],
+          "throughput_gbps_best": 34.92215609333653,
+          "throughput_gbps_median": 34.32141199744199,
+          "wall_s_max": 0.515126041995245,
+          "wall_s_median": 0.5005597770068562,
+          "wall_s_min": 0.4919489589956356
+        },
+        "meta": {
+          "target_bytes": 17179869184
+        },
+        "method": "flat",
+        "save": {
+          "bytes": 17179918336,
+          "cpu_cores_median": 0.252,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 17179918336,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00139,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.356,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.01172997200046666,
+              "manifest_bytes": 18512,
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 17179918336.0,
+                "rdma_write_ops": 33.0
+              },
+              "throughput_gbps": 26.495948770406795,
+              "total_s": 0.6374176320096012,
+              "upload_s": 0.6256876600091346,
+              "upload_threads": 32,
+              "wall_s": 0.6483979299955536
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 17179918336,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00098,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.252,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.010150342000997625,
+              "manifest_bytes": 18512,
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 17179918336.0,
+                "rdma_write_ops": 33.0
+              },
+              "throughput_gbps": 27.09070482414854,
+              "total_s": 0.6275864420022117,
+              "upload_s": 0.6174361000012141,
+              "upload_threads": 32,
+              "wall_s": 0.6341628410009434
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 17179918336,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00081,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.208,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.010118028003489599,
+              "manifest_bytes": 18512,
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 17179918336.0,
+                "rdma_write_ops": 33.0
+              },
+              "throughput_gbps": 19.824336133329446,
+              "total_s": 0.8622568780119764,
+              "upload_s": 0.8521388500084868,
+              "upload_threads": 32,
+              "wall_s": 0.8666074979992118
+            }
+          ],
+          "throughput_gbps_best": 27.09070482414854,
+          "throughput_gbps_median": 26.495948770406795,
+          "wall_s_max": 0.8666074979992118,
+          "wall_s_median": 0.6483979299955536,
+          "wall_s_min": 0.6341628410009434
+        },
+        "workload": "synthetic-16gib"
+      },
+      {
+        "backend": "http",
+        "load": {
+          "bytes": 17179918336,
+          "cpu_cores_median": 2.874,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 17179918336,
+              "cpu_busy_fraction": 0.01203,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 3.081,
+              "download_s": 5.316787300005672,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.00842698899214156,
+              "throughput_gbps": 3.2232583267328696,
+              "total_s": 5.325214288997813,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 5.3299849390023155
+            },
+            {
+              "bytes": 17179918336,
+              "cpu_busy_fraction": 0.01123,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 2.874,
+              "download_s": 5.443106860999251,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.009621802004403435,
+              "throughput_gbps": 3.147954761796275,
+              "total_s": 5.452728663003654,
+              "wall_s": 5.457485776001704
+            },
+            {
+              "bytes": 17179918336,
+              "cpu_busy_fraction": 0.01119,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 2.866,
+              "download_s": 5.48814266899717,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.008444153005257249,
+              "throughput_gbps": 3.1229006269581703,
+              "total_s": 5.496586822002428,
+              "wall_s": 5.501269617001526
+            }
+          ],
+          "throughput_gbps_best": 3.2232583267328696,
+          "throughput_gbps_median": 3.147954761796275,
+          "wall_s_max": 5.501269617001526,
+          "wall_s_median": 5.457485776001704,
+          "wall_s_min": 5.3299849390023155
+        },
+        "meta": {
+          "target_bytes": 17179869184
+        },
+        "method": "flat",
+        "save": {
+          "bytes": 17179918336,
+          "cpu_cores_median": 5.878,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 17179918336,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.01707,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 4.371,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.015725648001534864,
+              "manifest_bytes": 18512,
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 0.9882716407923572,
+              "total_s": 17.37743551300082,
+              "upload_s": 17.361709864999284,
+              "upload_threads": 32,
+              "wall_s": 17.38380180799868
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 17179918336,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.02351,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 6.02,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.010447766006109305,
+              "manifest_bytes": 18512,
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 1.4443758018911168,
+              "total_s": 11.887930511002196,
+              "upload_s": 11.877482744996087,
+              "upload_threads": 32,
+              "wall_s": 11.894354857999133
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 17179918336,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.02296,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 5.878,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.010212761000730097,
+              "manifest_bytes": 18512,
+              "num_chunks": 33,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 1.4130865723153017,
+              "total_s": 12.150915591992089,
+              "upload_s": 12.140702830991358,
+              "upload_threads": 32,
+              "wall_s": 12.157725274999393
+            }
+          ],
+          "throughput_gbps_best": 1.4443758018911168,
+          "throughput_gbps_median": 1.4130865723153017,
+          "wall_s_max": 17.38380180799868,
+          "wall_s_median": 12.157725274999393,
+          "wall_s_min": 11.894354857999133
+        },
+        "workload": "synthetic-16gib"
+      },
+      {
+        "backend": "http",
+        "load": {
+          "bytes": 17179908319,
+          "cpu_cores_median": 0.991,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 17179908319,
+              "cpu_busy_fraction": 0.00387,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.991,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.5540248242061244,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 31.00927533999493
+            },
+            {
+              "bytes": 17179908319,
+              "cpu_busy_fraction": 0.00386,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.988,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.49768491178198165,
+              "wall_s": 34.51964870200027
+            },
+            {
+              "bytes": 17179908319,
+              "cpu_busy_fraction": 0.00388,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.992,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.48362474795355437,
+              "wall_s": 35.523220000002766
+            }
+          ],
+          "throughput_gbps_best": 0.5540248242061244,
+          "throughput_gbps_median": 0.49768491178198165,
+          "wall_s_max": 35.523220000002766,
+          "wall_s_median": 34.51964870200027,
+          "wall_s_min": 31.00927533999493
+        },
+        "meta": {
+          "target_bytes": 17179869184
+        },
+        "method": "torch-save",
+        "save": {
+          "bytes": 17179908319,
+          "cpu_cores_median": 1.402,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 17179908319,
+              "cpu_busy_fraction": 0.00538,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.378,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 21.008945170004154,
+              "throughput_gbps": 0.2769825539096812,
+              "total_s": 61.45441070399829,
+              "upload_s": 40.44546553399414,
+              "wall_s": 62.025236161993234
+            },
+            {
+              "bytes": 17179908319,
+              "cpu_busy_fraction": 0.00548,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.402,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 21.00345634399855,
+              "throughput_gbps": 0.27466400476158587,
+              "total_s": 62.00056392799888,
+              "upload_s": 40.99710758400033,
+              "wall_s": 62.54881608499272
+            },
+            {
+              "bytes": 17179908319,
+              "cpu_busy_fraction": 0.00549,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.405,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 20.948860870004864,
+              "throughput_gbps": 0.2737036202090118,
+              "total_s": 62.197921863000374,
+              "upload_s": 41.24906099299551,
+              "wall_s": 62.7682904079993
+            }
+          ],
+          "throughput_gbps_best": 0.2769825539096812,
+          "throughput_gbps_median": 0.27466400476158587,
+          "wall_s_max": 62.7682904079993,
+          "wall_s_median": 62.54881608499272,
+          "wall_s_min": 62.025236161993234
+        },
+        "workload": "synthetic-16gib"
+      },
+      {
+        "backend": "rdma",
+        "load": {
+          "bytes": 34359787520,
+          "cpu_cores_median": 0.351,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 34359787520,
+              "cpu_busy_fraction": 0.00133,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.34,
+              "download_s": 0.9050633779988857,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 34359787520.0,
+                "rdma_read_ops": 65.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.002737340997555293,
+              "throughput_gbps": 37.66970496977951,
+              "total_s": 0.907800718996441,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 0.9121331729984377
+            },
+            {
+              "bytes": 34359787520,
+              "cpu_busy_fraction": 0.0015,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.383,
+              "download_s": 0.9331739780027419,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 34359787520.0,
+                "rdma_read_ops": 65.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.0026647419872460887,
+              "throughput_gbps": 36.558692249459234,
+              "total_s": 0.935838719989988,
+              "wall_s": 0.939852751995204
+            },
+            {
+              "bytes": 34359787520,
+              "cpu_busy_fraction": 0.00137,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.351,
+              "download_s": 0.9618455529998755,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 34359787520.0,
+                "rdma_read_ops": 65.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.002664569008629769,
+              "throughput_gbps": 35.475941635595824,
+              "total_s": 0.9645101220085053,
+              "wall_s": 0.9685377169953426
+            }
+          ],
+          "throughput_gbps_best": 37.66970496977951,
+          "throughput_gbps_median": 36.558692249459234,
+          "wall_s_max": 0.9685377169953426,
+          "wall_s_median": 0.939852751995204,
+          "wall_s_min": 0.9121331729984377
+        },
+        "meta": {
+          "target_bytes": 34359738368
+        },
+        "method": "flat",
+        "save": {
+          "bytes": 34359787520,
+          "cpu_cores_median": 0.322,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 34359787520,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00126,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.322,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.02271094599564094,
+              "manifest_bytes": 18682,
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 34359787520.0,
+                "rdma_write_ops": 65.0
+              },
+              "throughput_gbps": 23.02608328423271,
+              "total_s": 1.4824189219943946,
+              "upload_s": 1.4597079759987537,
+              "upload_threads": 32,
+              "wall_s": 1.4922115539957304
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 34359787520,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00118,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.303,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.018136489001335576,
+              "manifest_bytes": 18682,
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 34359787520.0,
+                "rdma_write_ops": 65.0
+              },
+              "throughput_gbps": 24.186793014989956,
+              "total_s": 1.4142083969927626,
+              "upload_s": 1.396071907991427,
+              "upload_threads": 32,
+              "wall_s": 1.4206012140057283
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 34359787520,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.00159,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.407,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.018135513993911445,
+              "manifest_bytes": 18682,
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 34359787520.0,
+                "rdma_write_ops": 65.0
+              },
+              "throughput_gbps": 25.43628242720541,
+              "total_s": 1.3447149849962443,
+              "upload_s": 1.3265794710023329,
+              "upload_threads": 32,
+              "wall_s": 1.3508179750060663
+            }
+          ],
+          "throughput_gbps_best": 25.43628242720541,
+          "throughput_gbps_median": 24.186793014989956,
+          "wall_s_max": 1.4922115539957304,
+          "wall_s_median": 1.4206012140057283,
+          "wall_s_min": 1.3508179750060663
+        },
+        "workload": "synthetic-32gib"
+      },
+      {
+        "backend": "http",
+        "load": {
+          "bytes": 34359787520,
+          "cpu_cores_median": 2.983,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 34359787520,
+              "cpu_busy_fraction": 0.01208,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 3.091,
+              "download_s": 10.95105602600961,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.013327356995432638,
+              "throughput_gbps": 3.1324336345613113,
+              "total_s": 10.964383383005043,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 10.969039261006401
+            },
+            {
+              "bytes": 34359787520,
+              "cpu_busy_fraction": 0.01165,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 2.983,
+              "download_s": 10.933715338993352,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.013494769009412266,
+              "throughput_gbps": 3.1374233296897485,
+              "total_s": 10.947210108002764,
+              "wall_s": 10.951594320998993
+            },
+            {
+              "bytes": 34359787520,
+              "cpu_busy_fraction": 0.01164,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 2.979,
+              "download_s": 10.94853091200639,
+              "download_threads": 32,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": 0.014421746993320994,
+              "throughput_gbps": 3.1327892809853295,
+              "total_s": 10.962952658999711,
+              "wall_s": 10.967794013005914
+            }
+          ],
+          "throughput_gbps_best": 3.1374233296897485,
+          "throughput_gbps_median": 3.1327892809853295,
+          "wall_s_max": 10.969039261006401,
+          "wall_s_median": 10.967794013005914,
+          "wall_s_min": 10.951594320998993
+        },
+        "meta": {
+          "target_bytes": 34359738368
+        },
+        "method": "flat",
+        "save": {
+          "bytes": 34359787520,
+          "cpu_cores_median": 5.779,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 34359787520,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.02205,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 5.644,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.028352599998470396,
+              "manifest_bytes": 18682,
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 1.3772581813444036,
+              "total_s": 24.93829282000661,
+              "upload_s": 24.90994022000814,
+              "upload_threads": 32,
+              "wall_s": 24.947963995000464
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 34359787520,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.02264,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 5.796,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.018766594002954662,
+              "manifest_bytes": 18682,
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 1.4127194611484821,
+              "total_s": 24.315255371009698,
+              "upload_s": 24.296488777006743,
+              "upload_threads": 32,
+              "wall_s": 24.321734402998118
+            },
+            {
+              "buffer_device": "cuda:0",
+              "bytes": 34359787520,
+              "chunk_bytes": 536870912,
+              "cpu_busy_fraction": 0.02257,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 5.779,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "flatten_s": 0.018743898006505333,
+              "manifest_bytes": 18682,
+              "num_chunks": 65,
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "throughput_gbps": 1.401083182369483,
+              "total_s": 24.51757005401305,
+              "upload_s": 24.498826156006544,
+              "upload_threads": 32,
+              "wall_s": 24.523731319000944
+            }
+          ],
+          "throughput_gbps_best": 1.4127194611484821,
+          "throughput_gbps_median": 1.401083182369483,
+          "wall_s_max": 24.947963995000464,
+          "wall_s_median": 24.523731319000944,
+          "wall_s_min": 24.321734402998118
+        },
+        "workload": "synthetic-32gib"
+      },
+      {
+        "backend": "http",
+        "load": {
+          "bytes": 34359777695,
+          "cpu_cores_median": 0.99,
+          "phase": "load",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 34359777695,
+              "cpu_busy_fraction": 0.00383,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.98,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.441068232484065,
+              "verified": {
+                "mismatched": [],
+                "ok": true,
+                "tensors_checked": 128
+              },
+              "wall_s": 77.901275051001
+            },
+            {
+              "bytes": 34359777695,
+              "cpu_busy_fraction": 0.00387,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 0.99,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.47436207458765806,
+              "wall_s": 72.43365255299432
+            },
+            {
+              "bytes": 34359777695,
+              "cpu_busy_fraction": 0.004,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.024,
+              "download_s": null,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "rebuild_s": null,
+              "throughput_gbps": 0.46328410977711737,
+              "wall_s": 74.16567279100127
+            }
+          ],
+          "throughput_gbps_best": 0.47436207458765806,
+          "throughput_gbps_median": 0.46328410977711737,
+          "wall_s_max": 77.901275051001,
+          "wall_s_median": 74.16567279100127,
+          "wall_s_min": 72.43365255299432
+        },
+        "meta": {
+          "target_bytes": 34359738368
+        },
+        "method": "torch-save",
+        "save": {
+          "bytes": 34359777695,
+          "cpu_cores_median": 1.418,
+          "phase": "save",
+          "repeats": 3,
+          "runs": [
+            {
+              "bytes": 34359777695,
+              "cpu_busy_fraction": 0.00558,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.428,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 44.351679033003165,
+              "throughput_gbps": 0.25335481155643863,
+              "total_s": 134.50515745900339,
+              "upload_s": 90.15347842600022,
+              "wall_s": 135.6192032980034
+            },
+            {
+              "bytes": 34359777695,
+              "cpu_busy_fraction": 0.00545,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.395,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 44.19801670200832,
+              "throughput_gbps": 0.25263290743394734,
+              "total_s": 134.89388766400225,
+              "upload_s": 90.69587096199393,
+              "wall_s": 136.00673817200004
+            },
+            {
+              "bytes": 34359777695,
+              "cpu_busy_fraction": 0.00554,
+              "cpu_cores_total": 256,
+              "cpu_cores_used": 1.418,
+              "fabric_health": {
+                "mlx5_0": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                },
+                "mlx5_1": {
+                  "local_ack_timeout_err": 0,
+                  "out_of_buffer": 0,
+                  "packet_seq_err": 0,
+                  "req_cqe_error": 0,
+                  "resp_cqe_error": 0,
+                  "rnr_nak_retry_err": 0
+                }
+              },
+              "rdma_witness": {
+                "metrics_unreachable": [],
+                "rdma_read_bytes": 0.0,
+                "rdma_read_ops": 0.0,
+                "rdma_write_bytes": 0.0,
+                "rdma_write_ops": 0.0
+              },
+              "serialize_s": 44.477887121989625,
+              "throughput_gbps": 0.24936428295491997,
+              "total_s": 136.69204523599183,
+              "upload_s": 92.2141581140022,
+              "wall_s": 137.78949129299144
+            }
+          ],
+          "throughput_gbps_best": 0.25335481155643863,
+          "throughput_gbps_median": 0.25263290743394734,
+          "wall_s_max": 137.78949129299144,
+          "wall_s_median": 136.00673817200004,
+          "wall_s_min": 135.6192032980034
+        },
+        "workload": "synthetic-32gib"
+      }
+    ]
+  },
+  "timestamp": "2026-08-19T00:03:18+0000"
+}

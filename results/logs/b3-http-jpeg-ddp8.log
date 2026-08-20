@@ -1,0 +1,238 @@
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+W0819 00:33:27.902000 185276 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] 
+W0819 00:33:27.902000 185276 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] *****************************************
+W0819 00:33:27.902000 185276 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0819 00:33:27.902000 185276 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] *****************************************
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank5]:   File "<frozen runpy>", line 88, in _run_code
+[rank5]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 393, in <module>
+[rank5]:     sys.exit(main())
+[rank5]:              ^^^^^^
+[rank5]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 298, in main
+[rank5]:     result = run(args, rank, world)
+[rank5]:              ^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 83, in run
+[rank5]:     keys = list_shards(store, args.prefix, args.layout, args.max_shards)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 60, in list_shards
+[rank5]:     keys = sorted(k for k, _ in store.list(prefix) if k.endswith(suffix))
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 60, in <genexpr>
+[rank5]:     keys = sorted(k for k, _ in store.list(prefix) if k.endswith(suffix))
+[rank5]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/home/minio/ai-training/src/s3rdma_train/s3.py", line 324, in list
+[rank5]:     for o in self._client(0).list_objects(self.cfg.bucket, prefix=prefix, recursive=True):
+[rank5]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 3329, in _list_objects
+[rank5]:     response = self._execute(
+[rank5]:                ^^^^^^^^^^^^^^
+[rank5]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 441, in _execute
+[rank5]:     region = self._get_region(bucket_name)
+[rank5]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 498, in _get_region
+[rank5]:     response = self._url_open(
+[rank5]:                ^^^^^^^^^^^^^^^
+[rank5]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 427, in _url_open
+[rank5]:     raise response_error
+[rank5]: minio.error.S3Error: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /imagenet-shards, request_id: 18CD0DA1BF801196, host_id: 3ad20785a22f14ca066801a28faf308c9e2ea56d81048d0df84c97a7029e5fde, bucket_name: imagenet-shards
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank7]:   File "<frozen runpy>", line 88, in _run_code
+[rank7]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 393, in <module>
+[rank7]:     sys.exit(main())
+[rank7]:              ^^^^^^
+[rank7]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 298, in main
+[rank7]:     result = run(args, rank, world)
+[rank7]:              ^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 83, in run
+[rank7]:     keys = list_shards(store, args.prefix, args.layout, args.max_shards)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 60, in list_shards
+[rank7]:     keys = sorted(k for k, _ in store.list(prefix) if k.endswith(suffix))
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 60, in <genexpr>
+[rank7]:     keys = sorted(k for k, _ in store.list(prefix) if k.endswith(suffix))
+[rank7]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/home/minio/ai-training/src/s3rdma_train/s3.py", line 324, in list
+[rank7]:     for o in self._client(0).list_objects(self.cfg.bucket, prefix=prefix, recursive=True):
+[rank7]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 3329, in _list_objects
+[rank7]:     response = self._execute(
+[rank7]:                ^^^^^^^^^^^^^^
+[rank7]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 441, in _execute
+[rank7]:     region = self._get_region(bucket_name)
+[rank7]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 498, in _get_region
+[rank7]:     response = self._url_open(
+[rank7]:                ^^^^^^^^^^^^^^^
+[rank7]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 427, in _url_open
+[rank7]:     raise response_error
+[rank7]: minio.error.S3Error: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /imagenet-shards, request_id: 18CD0DA1CDF892B2, host_id: 3ad20785a22f14ca066801a28faf308c9e2ea56d81048d0df84c97a7029e5fde, bucket_name: imagenet-shards
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank1]:   File "<frozen runpy>", line 88, in _run_code
+[rank1]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 393, in <module>
+[rank1]:     sys.exit(main())
+[rank1]:              ^^^^^^
+[rank1]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 298, in main
+[rank1]:     result = run(args, rank, world)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 83, in run
+[rank1]:     keys = list_shards(store, args.prefix, args.layout, args.max_shards)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 60, in list_shards
+[rank1]:     keys = sorted(k for k, _ in store.list(prefix) if k.endswith(suffix))
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 60, in <genexpr>
+[rank1]:     keys = sorted(k for k, _ in store.list(prefix) if k.endswith(suffix))
+[rank1]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/minio/ai-training/src/s3rdma_train/s3.py", line 324, in list
+[rank1]:     for o in self._client(0).list_objects(self.cfg.bucket, prefix=prefix, recursive=True):
+[rank1]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 3329, in _list_objects
+[rank1]:     response = self._execute(
+[rank1]:                ^^^^^^^^^^^^^^
+[rank1]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 441, in _execute
+[rank1]:     region = self._get_region(bucket_name)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 498, in _get_region
+[rank1]:     response = self._url_open(
+[rank1]:                ^^^^^^^^^^^^^^^
+[rank1]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 427, in _url_open
+[rank1]:     raise response_error
+[rank1]: minio.error.S3Error: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /imagenet-shards, request_id: 18CD0DA1D0FA30F9, host_id: 3ad20785a22f14ca066801a28faf308c9e2ea56d81048d0df84c97a7029e5fde, bucket_name: imagenet-shards
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank2]:   File "<frozen runpy>", line 88, in _run_code
+[rank2]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 393, in <module>
+[rank2]:     sys.exit(main())
+[rank2]:              ^^^^^^
+[rank2]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 298, in main
+[rank2]:     result = run(args, rank, world)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 83, in run
+[rank2]:     keys = list_shards(store, args.prefix, args.layout, args.max_shards)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 60, in list_shards
+[rank2]:     keys = sorted(k for k, _ in store.list(prefix) if k.endswith(suffix))
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/minio/ai-training/src/s3rdma_train/train_resnet50.py", line 60, in <genexpr>
+[rank2]:     keys = sorted(k for k, _ in store.list(prefix) if k.endswith(suffix))
+[rank2]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/minio/ai-training/src/s3rdma_train/s3.py", line 324, in list
+[rank2]:     for o in self._client(0).list_objects(self.cfg.bucket, prefix=prefix, recursive=True):
+[rank2]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 3329, in _list_objects
+[rank2]:     response = self._execute(
+[rank2]:                ^^^^^^^^^^^^^^
+[rank2]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 441, in _execute
+[rank2]:     region = self._get_region(bucket_name)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 498, in _get_region
+[rank2]:     response = self._url_open(
+[rank2]:                ^^^^^^^^^^^^^^^
+[rank2]:   File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/minio/api.py", line 427, in _url_open
+[rank2]:     raise response_error
+[rank2]: minio.error.S3Error: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /imagenet-shards, request_id: 18CD0DA1D47716B1, host_id: 3ad20785a22f14ca066801a28faf308c9e2ea56d81048d0df84c97a7029e5fde, bucket_name: imagenet-shards
+W0819 00:33:35.946000 185276 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 185379 closing signal SIGTERM
+W0819 00:33:35.948000 185276 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 185380 closing signal SIGTERM
+W0819 00:33:35.948000 185276 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 185381 closing signal SIGTERM
+W0819 00:33:35.949000 185276 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 185382 closing signal SIGTERM
+W0819 00:33:35.949000 185276 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 185383 closing signal SIGTERM
+W0819 00:33:35.950000 185276 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 185385 closing signal SIGTERM
+W0819 00:33:35.950000 185276 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 185386 closing signal SIGTERM
+E0819 00:33:36.642000 185276 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1002] failed (exitcode: 1) local_rank: 5 (pid: 185384) of binary: /home/minio/ai-training/.venv/bin/python
+Traceback (most recent call last):
+  File "/home/minio/ai-training/.venv/bin/torchrun", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 367, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 1028, in main
+    run(args)
+  File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 1019, in run
+    elastic_launch(
+  File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 194, in __call__
+    return launch_agent(
+           ^^^^^^^^^^^^^
+  File "/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 383, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+s3rdma_train.train_resnet50 FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-08-19_00:33:36
+  host      : gpu-4
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 185379)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 185379
+[2]:
+  time      : 2026-08-19_00:33:36
+  host      : gpu-4
+  rank      : 1 (local_rank: 1)
+  exitcode  : -15 (pid: 185380)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 185380
+[3]:
+  time      : 2026-08-19_00:33:36
+  host      : gpu-4
+  rank      : 2 (local_rank: 2)
+  exitcode  : -15 (pid: 185381)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 185381
+[4]:
+  time      : 2026-08-19_00:33:36
+  host      : gpu-4
+  rank      : 3 (local_rank: 3)
+  exitcode  : -15 (pid: 185382)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 185382
+[5]:
+  time      : 2026-08-19_00:33:36
+  host      : gpu-4
+  rank      : 4 (local_rank: 4)
+  exitcode  : -15 (pid: 185383)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 185383
+[6]:
+  time      : 2026-08-19_00:33:36
+  host      : gpu-4
+  rank      : 6 (local_rank: 6)
+  exitcode  : -15 (pid: 185385)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 185385
+[7]:
+  time      : 2026-08-19_00:33:36
+  host      : gpu-4
+  rank      : 7 (local_rank: 7)
+  exitcode  : -15 (pid: 185386)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 185386
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-08-19_00:33:35
+  host      : gpu-4
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 185384) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

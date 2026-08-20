@@ -1,0 +1,612 @@
+{
+  "backend": "rdma",
+  "benchmark": "b3-resnet50-fw2",
+  "environment": {
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "amp": "bf16",
+    "batch_size": 256,
+    "bucket": "imagenet-raw",
+    "channels_last": true,
+    "crop": 224,
+    "endpoints": "aistor1:9000,aistor2:9000",
+    "fetch_workers": 2,
+    "gpus": 8,
+    "http_parts": 8,
+    "layout": "raw",
+    "loader_only": false,
+    "prefetch": 2,
+    "steps": 200,
+    "warmup": 20
+  },
+  "rdma_witness": {},
+  "results": {
+    "aggregate": {
+      "bytes_fetched_total": 77309214720,
+      "cpu_cores_used": 7.206,
+      "fabric_errors_total": 0,
+      "fetch_gbps_total": 4.262120358422805,
+      "fetch_wait_fraction_max": 0.20705482645813914,
+      "fetch_wait_s_max": 3.7559,
+      "global_batch": 2048,
+      "gpus": 8,
+      "images_per_s": 22579.420765979088,
+      "images_total": 409600,
+      "rdma_read_bytes_per_rank": [
+        64424312832.0,
+        64424312832.0,
+        64424312832.0,
+        64424312832.0,
+        64424312832.0,
+        64424312832.0,
+        64424312832.0,
+        64424312832.0
+      ],
+      "rdma_read_bytes_total": 64424312832.0,
+      "sec_per_step_median": 0.05845169500389602,
+      "seconds_for_n_batches": 18.140412203007145,
+      "shards_in_window": 96,
+      "steps_measured": 200,
+      "wall_s": 18.140412203007145
+    },
+    "ranks": [
+      {
+        "batch_size": 256,
+        "compute_fraction": 0.8850662930031575,
+        "compute_s_total": 16.049124759825645,
+        "cpu_busy_fraction": 0.02815,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 7.206,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "fetch_wait_fraction": 0.10367145555386109,
+        "images": 51200,
+        "images_per_s": 2823.5430205636935,
+        "loader": {
+          "augment_s": 0.328,
+          "batches": 220,
+          "bytes_fetched": 11274289152,
+          "decode_s": 0.0,
+          "fetch_gbps": 0.2102161967187075,
+          "fetch_s": 53.6319,
+          "fetch_wait_s": 5.2645,
+          "samples": 56320,
+          "shards": 14
+        },
+        "loss_first": 7.21826171875,
+        "loss_last": 6.035888671875,
+        "rank": 0,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 64424312832.0,
+          "rdma_read_ops": 80.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "sec_per_step_mean": 0.08024562379912822,
+        "sec_per_step_median": 0.05845099150610622,
+        "steps_measured": 200,
+        "wall_s": 18.133245935023297,
+        "window": {
+          "augment_s": 0.2012,
+          "bytes_fetched": 9663676416,
+          "decode_s": 0.0,
+          "fetch_gbps_effective": 0.5329259003395073,
+          "fetch_wait_s": 1.8799,
+          "shards": 12
+        },
+        "world": 8
+      },
+      {
+        "batch_size": 256,
+        "compute_fraction": 0.8903430369751133,
+        "compute_s_total": 16.150585676950868,
+        "cpu_busy_fraction": 0.02815,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 7.206,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "fetch_wait_fraction": 0.09964313812032248,
+        "images": 51200,
+        "images_per_s": 2822.5331517347227,
+        "loader": {
+          "augment_s": 0.299,
+          "batches": 220,
+          "bytes_fetched": 11274289152,
+          "decode_s": 0.0,
+          "fetch_gbps": 0.21016951174820994,
+          "fetch_s": 53.6438,
+          "fetch_wait_s": 5.1923,
+          "samples": 56320,
+          "shards": 14
+        },
+        "loss_first": 7.1297607421875,
+        "loss_last": 5.86944580078125,
+        "rank": 1,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 64424312832.0,
+          "rdma_read_ops": 80.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "sec_per_step_mean": 0.08075292838475434,
+        "sec_per_step_median": 0.05846604249381926,
+        "steps_measured": 200,
+        "wall_s": 18.139733794989297,
+        "window": {
+          "augment_s": 0.1788,
+          "bytes_fetched": 9663676416,
+          "decode_s": 0.0,
+          "fetch_gbps_effective": 0.53273529398041,
+          "fetch_wait_s": 1.8075,
+          "shards": 12
+        },
+        "world": 8
+      },
+      {
+        "batch_size": 256,
+        "compute_fraction": 0.7826385698346657,
+        "compute_s_total": 14.196781860751798,
+        "cpu_busy_fraction": 0.02815,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 7.206,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "fetch_wait_fraction": 0.20705482645813914,
+        "images": 51200,
+        "images_per_s": 2822.547755439901,
+        "loader": {
+          "augment_s": 0.2619,
+          "batches": 220,
+          "bytes_fetched": 11274092544,
+          "decode_s": 0.0,
+          "fetch_gbps": 0.2110565482138571,
+          "fetch_s": 53.4174,
+          "fetch_wait_s": 7.1427,
+          "samples": 56320,
+          "shards": 14
+        },
+        "loss_first": 7.04217529296875,
+        "loss_last": 6.00860595703125,
+        "rank": 2,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 64424312832.0,
+          "rdma_read_ops": 80.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "sec_per_step_mean": 0.07098390930375899,
+        "sec_per_step_median": 0.05843820099835284,
+        "steps_measured": 200,
+        "wall_s": 18.139639941015048,
+        "window": {
+          "augment_s": 0.1838,
+          "bytes_fetched": 9663479808,
+          "decode_s": 0.0,
+          "fetch_gbps_effective": 0.532727211754086,
+          "fetch_wait_s": 3.7559,
+          "shards": 12
+        },
+        "world": 8
+      },
+      {
+        "batch_size": 256,
+        "compute_fraction": 0.8933144364672876,
+        "compute_s_total": 16.20329777695588,
+        "cpu_busy_fraction": 0.02815,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 7.206,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "fetch_wait_fraction": 0.09646383662156338,
+        "images": 51200,
+        "images_per_s": 2822.740146896065,
+        "loader": {
+          "augment_s": 0.3107,
+          "batches": 220,
+          "bytes_fetched": 11274289152,
+          "decode_s": 0.0,
+          "fetch_gbps": 0.210280295567256,
+          "fetch_s": 53.6155,
+          "fetch_wait_s": 5.1373,
+          "samples": 56320,
+          "shards": 14
+        },
+        "loss_first": 7.1954345703125,
+        "loss_last": 5.972625732421875,
+        "rank": 3,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 64424312832.0,
+          "rdma_read_ops": 80.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "sec_per_step_mean": 0.08101648888477939,
+        "sec_per_step_median": 0.05844950501341373,
+        "steps_measured": 200,
+        "wall_s": 18.138403585006017,
+        "window": {
+          "augment_s": 0.1825,
+          "bytes_fetched": 9663676416,
+          "decode_s": 0.0,
+          "fetch_gbps_effective": 0.5327743630089039,
+          "fetch_wait_s": 1.7497,
+          "shards": 12
+        },
+        "world": 8
+      },
+      {
+        "batch_size": 256,
+        "compute_fraction": 0.8914147410429331,
+        "compute_s_total": 16.169854088046122,
+        "cpu_busy_fraction": 0.02815,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 7.206,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "fetch_wait_fraction": 0.09836522418707236,
+        "images": 51200,
+        "images_per_s": 2822.563177928658,
+        "loader": {
+          "augment_s": 0.3034,
+          "batches": 220,
+          "bytes_fetched": 11274289152,
+          "decode_s": 0.0,
+          "fetch_gbps": 0.21007225606256225,
+          "fetch_s": 53.6686,
+          "fetch_wait_s": 5.0683,
+          "samples": 56320,
+          "shards": 14
+        },
+        "loss_first": 7.0360107421875,
+        "loss_last": 5.969970703125,
+        "rank": 4,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 64424312832.0,
+          "rdma_read_ops": 80.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "sec_per_step_mean": 0.08084927044023062,
+        "sec_per_step_median": 0.05845239850168582,
+        "steps_measured": 200,
+        "wall_s": 18.139540825999575,
+        "window": {
+          "augment_s": 0.1824,
+          "bytes_fetched": 9663676416,
+          "decode_s": 0.0,
+          "fetch_gbps_effective": 0.5327409612347498,
+          "fetch_wait_s": 1.7843,
+          "shards": 12
+        },
+        "world": 8
+      },
+      {
+        "batch_size": 256,
+        "compute_fraction": 0.8884169049650462,
+        "compute_s_total": 16.116248864185764,
+        "cpu_busy_fraction": 0.02815,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 7.206,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "fetch_wait_fraction": 0.10094037442525466,
+        "images": 51200,
+        "images_per_s": 2822.427595747386,
+        "loader": {
+          "augment_s": 0.3091,
+          "batches": 220,
+          "bytes_fetched": 11274289152,
+          "decode_s": 0.0,
+          "fetch_gbps": 0.20999445994496044,
+          "fetch_s": 53.6885,
+          "fetch_wait_s": 4.7251,
+          "samples": 56320,
+          "shards": 14
+        },
+        "loss_first": 7.151123046875,
+        "loss_last": 5.99163818359375,
+        "rank": 5,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 64424312832.0,
+          "rdma_read_ops": 80.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "sec_per_step_mean": 0.08058124432092882,
+        "sec_per_step_median": 0.05844021850498393,
+        "steps_measured": 200,
+        "wall_s": 18.140412203007145,
+        "window": {
+          "augment_s": 0.1899,
+          "bytes_fetched": 9663676416,
+          "decode_s": 0.0,
+          "fetch_gbps_effective": 0.5327153709549141,
+          "fetch_wait_s": 1.8311,
+          "shards": 12
+        },
+        "world": 8
+      },
+      {
+        "batch_size": 256,
+        "compute_fraction": 0.8872877939788966,
+        "compute_s_total": 16.093938413250726,
+        "cpu_busy_fraction": 0.02815,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 7.206,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "fetch_wait_fraction": 0.10251758211932299,
+        "images": 51200,
+        "images_per_s": 2822.748160532045,
+        "loader": {
+          "augment_s": 0.2569,
+          "batches": 220,
+          "bytes_fetched": 11274289152,
+          "decode_s": 0.0,
+          "fetch_gbps": 0.21061345138124996,
+          "fetch_s": 53.5307,
+          "fetch_wait_s": 4.6424,
+          "samples": 56320,
+          "shards": 14
+        },
+        "loss_first": 7.0706787109375,
+        "loss_last": 6.0283203125,
+        "rank": 6,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 64424312832.0,
+          "rdma_read_ops": 80.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "sec_per_step_mean": 0.08046969206625362,
+        "sec_per_step_median": 0.05846391750674229,
+        "steps_measured": 200,
+        "wall_s": 18.138352091016714,
+        "window": {
+          "augment_s": 0.1821,
+          "bytes_fetched": 9663676416,
+          "decode_s": 0.0,
+          "fetch_gbps_effective": 0.532775875532049,
+          "fetch_wait_s": 1.8595,
+          "shards": 12
+        },
+        "world": 8
+      },
+      {
+        "batch_size": 256,
+        "compute_fraction": 0.8900343020901983,
+        "compute_s_total": 16.14528571628034,
+        "cpu_busy_fraction": 0.02815,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 7.206,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "fetch_wait_fraction": 0.09979563851565532,
+        "images": 51200,
+        "images_per_s": 2822.4806341498934,
+        "loader": {
+          "augment_s": 0.3037,
+          "batches": 220,
+          "bytes_fetched": 11274289152,
+          "decode_s": 0.0,
+          "fetch_gbps": 0.21035059848920654,
+          "fetch_s": 53.5976,
+          "fetch_wait_s": 5.1999,
+          "samples": 56320,
+          "shards": 14
+        },
+        "loss_first": 7.32940673828125,
+        "loss_last": 5.8897705078125,
+        "rank": 7,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 64424312832.0,
+          "rdma_read_ops": 80.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "sec_per_step_mean": 0.08072642858140171,
+        "sec_per_step_median": 0.05845419300021604,
+        "steps_measured": 200,
+        "wall_s": 18.14007131900871,
+        "window": {
+          "augment_s": 0.1815,
+          "bytes_fetched": 9663676416,
+          "decode_s": 0.0,
+          "fetch_gbps_effective": 0.5327253816181845,
+          "fetch_wait_s": 1.8103,
+          "shards": 12
+        },
+        "world": 8
+      }
+    ]
+  },
+  "timestamp": "2026-08-20T00:58:06+0000"
+}

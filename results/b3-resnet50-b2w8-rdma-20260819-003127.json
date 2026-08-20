@@ -1,0 +1,161 @@
+{
+  "backend": "rdma",
+  "benchmark": "b3-resnet50-b2w8",
+  "environment": {
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "amp": "bf16",
+    "batch_size": 256,
+    "bucket": "imagenet-raw",
+    "channels_last": true,
+    "crop": 224,
+    "endpoints": "aistor1:9000,aistor2:9000",
+    "fetch_workers": 8,
+    "gpus": 1,
+    "http_parts": 8,
+    "layout": "raw",
+    "loader_only": true,
+    "prefetch": 2,
+    "steps": 200,
+    "warmup": 20
+  },
+  "rdma_witness": {},
+  "results": {
+    "aggregate": {
+      "bytes_fetched_total": 9663676416,
+      "cpu_cores_used": 1.119,
+      "fabric_errors_total": 0,
+      "fetch_gbps_total": 47.1867983007708,
+      "fetch_wait_fraction_max": 0.0004882903386815017,
+      "fetch_wait_s_max": 0.0001,
+      "global_batch": 256,
+      "gpus": 1,
+      "images_per_s": 250004.6534049289,
+      "images_total": 51200,
+      "rdma_read_bytes_total": 7247757312.0,
+      "sec_per_step_median": 0.00023857600172050297,
+      "seconds_for_n_batches": 0.20479618800163735,
+      "shards_in_window": 12,
+      "steps_measured": 200,
+      "wall_s": 0.20479618800163735
+    },
+    "ranks": [
+      {
+        "batch_size": 256,
+        "compute_fraction": 0.2325454515006189,
+        "compute_s_total": 0.04762442200444639,
+        "cpu_busy_fraction": 0.00437,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 1.119,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "fetch_wait_fraction": 0.0004882903386815017,
+        "images": 51200,
+        "images_per_s": 250004.6534049289,
+        "loader": {
+          "augment_s": 0.288,
+          "batches": 220,
+          "bytes_fetched": 11274289152,
+          "decode_s": 0.0,
+          "fetch_gbps": 3.2331543001259027,
+          "fetch_s": 3.4871,
+          "fetch_wait_s": 0.1791,
+          "samples": 56320,
+          "shards": 14
+        },
+        "loss_first": 0.0,
+        "loss_last": 0.0,
+        "rank": 0,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 7247757312.0,
+          "rdma_read_ops": 9.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "sec_per_step_mean": 0.00023812211002223195,
+        "sec_per_step_median": 0.00023857600172050297,
+        "steps_measured": 200,
+        "wall_s": 0.20479618800163735,
+        "window": {
+          "augment_s": 0.1559,
+          "bytes_fetched": 9663676416,
+          "decode_s": 0.0,
+          "fetch_gbps_effective": 47.1867983007708,
+          "fetch_wait_s": 0.0001,
+          "shards": 12
+        },
+        "world": 1
+      }
+    ]
+  },
+  "timestamp": "2026-08-19T00:31:27+0000"
+}

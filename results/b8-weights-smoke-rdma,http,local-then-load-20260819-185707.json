@@ -1,0 +1,222 @@
+{
+  "backend": "rdma,http,local-then-load",
+  "benchmark": "b8-weights-smoke",
+  "environment": {
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "bucket": "model-weights",
+    "concurrency": 8,
+    "device": "cuda:0",
+    "endpoints": [
+      "aistor1:9000",
+      "aistor2:9000"
+    ],
+    "model": "qwen2.5-1.5b-instruct",
+    "repeats": 2,
+    "shard_bytes": [
+      3087467144
+    ],
+    "window_mib": 1024
+  },
+  "rdma_witness": {},
+  "results": {
+    "rows": [
+      {
+        "backend": "rdma",
+        "cores_median": 0.118,
+        "gbps_median": 18.25876976251734,
+        "runs": [
+          {
+            "bytes": 3087428608,
+            "cpu_busy_fraction": 0.00044,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 0.113,
+            "gbps": 17.502703103492014,
+            "num_tensors": 338,
+            "peak_vram_bytes": 3087428608,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 3087428608.0,
+              "rdma_read_ops": 3.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 1,
+            "wall_s": 0.1763972450280562,
+            "windows_total": 3
+          },
+          {
+            "bytes": 3087428608,
+            "cpu_busy_fraction": 0.00048,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 0.123,
+            "gbps": 19.014836421542665,
+            "num_tensors": 338,
+            "peak_vram_bytes": 3087428608,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 3087428608.0,
+              "rdma_read_ops": 3.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 1,
+            "wall_s": 0.1623694540176075,
+            "windows_total": 3
+          }
+        ],
+        "verified": {
+          "mismatched": [],
+          "ok": true,
+          "tensors_checked": 13
+        },
+        "wall_s_max": 0.1763972450280562,
+        "wall_s_median": 0.16938334952283185,
+        "wall_s_min": 0.1623694540176075
+      },
+      {
+        "backend": "http",
+        "cores_median": 1.8315000000000001,
+        "gbps_median": 2.8857822181101467,
+        "runs": [
+          {
+            "bytes": 3087428608,
+            "cpu_busy_fraction": 0.00606,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 1.552,
+            "gbps": 1.714604745320905,
+            "num_tensors": 338,
+            "peak_vram_bytes": 3087428608,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 0.0,
+              "rdma_read_ops": 0.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 1,
+            "wall_s": 1.8006649150047451,
+            "windows_total": 3
+          },
+          {
+            "bytes": 3087428608,
+            "cpu_busy_fraction": 0.00825,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 2.111,
+            "gbps": 4.056959690899388,
+            "num_tensors": 338,
+            "peak_vram_bytes": 3087428608,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 0.0,
+              "rdma_read_ops": 0.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 1,
+            "wall_s": 0.761020281992387,
+            "windows_total": 3
+          }
+        ],
+        "verified": {
+          "mismatched": [],
+          "ok": true,
+          "tensors_checked": 13
+        },
+        "wall_s_max": 1.8006649150047451,
+        "wall_s_median": 1.280842598498566,
+        "wall_s_min": 0.761020281992387
+      },
+      {
+        "backend": "local-then-load",
+        "cores_median": 1.0434999999999999,
+        "gbps_median": 4.39702390666396,
+        "runs": [
+          {
+            "bytes": 3087428608,
+            "cpu_busy_fraction": 0.00415,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 1.063,
+            "gbps": 3.608876438441937,
+            "num_tensors": 338,
+            "peak_vram_bytes": 3088346112,
+            "shards": 1,
+            "wall_s": 0.8555096470226999
+          },
+          {
+            "bytes": 3087428608,
+            "cpu_busy_fraction": 0.004,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 1.024,
+            "gbps": 5.185171374885982,
+            "num_tensors": 338,
+            "peak_vram_bytes": 3088346112,
+            "shards": 1,
+            "wall_s": 0.5954342460026965
+          }
+        ],
+        "verified": {
+          "mismatched": [],
+          "ok": true,
+          "tensors_checked": 13
+        },
+        "wall_s_max": 0.8555096470226999,
+        "wall_s_median": 0.7254719465126982,
+        "wall_s_min": 0.5954342460026965
+      }
+    ]
+  },
+  "timestamp": "2026-08-19T18:57:07+0000"
+}

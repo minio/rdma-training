@@ -1,0 +1,255 @@
+{
+  "backend": "http",
+  "benchmark": "b1-fetch-mp24",
+  "environment": {
+    "cpu_count": 256,
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "bucket": "bench-fetch",
+    "concurrency": [
+      8,
+      16,
+      32
+    ],
+    "device": "cuda:0",
+    "endpoints": [
+      "aistor1:9000",
+      "aistor2:9000"
+    ],
+    "http_parts": 8,
+    "http_threads": 32,
+    "iters_per_stream": 6,
+    "objects_per_size": 128,
+    "processes": 24,
+    "sizes_mib": [
+      256
+    ]
+  },
+  "rdma_witness": {},
+  "results": {
+    "cells": [
+      {
+        "bytes": 309237645312,
+        "concurrency": 8,
+        "cpu_busy_fraction": 0.07687,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 19.678,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "gb_per_cpu_core": 0.4583539824088553,
+        "iters_per_stream": 6,
+        "latency": {
+          "max_ms": 6140.913832990918,
+          "mean_ms": 1995.110612804044,
+          "min_ms": 111.2348010065034,
+          "p50_ms": 1936.5946009929758,
+          "p90_ms": 2937.629352003569,
+          "p99_ms": 4273.242213006597
+        },
+        "nic_rx_bytes_delta": {
+          "enp157s0np0.rx_bytes": 13783,
+          "enp27s0np0.rx_bytes": 363490814351
+        },
+        "ops": 1152,
+        "ops_per_s": 33.60017504823175,
+        "processes": 24,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 0.0,
+          "rdma_read_ops": 0.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "size_bytes": 268435456,
+        "throughput_gbps_bytes": 9.01947831075191,
+        "throughput_gbps_steady": 22.98772301369117,
+        "wall_s": 34.285535666000214,
+        "worker_wall_s": [
+          13.452295606999542,
+          13.065295414999127,
+          13.210053307993803,
+          12.84425043000374,
+          13.061168306987383,
+          13.160310969004058,
+          12.84219687699806,
+          13.057073488991591,
+          12.99090998400061,
+          13.130027147999499,
+          13.056977169006132,
+          13.17002034500183,
+          12.746396981005091,
+          13.216099028999452,
+          11.42651468400436,
+          13.255476072008605,
+          12.901045066988445,
+          11.332573142004549,
+          13.039507488996605,
+          12.886970866995398,
+          13.260178372001974,
+          12.022409805009374,
+          12.998297395999543,
+          13.20748404499318
+        ]
+      },
+      {
+        "bytes": 618475290624,
+        "concurrency": 16,
+        "cpu_busy_fraction": 0.09167,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 23.467,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "gb_per_cpu_core": 0.4489301065545451,
+        "iters_per_stream": 6,
+        "latency": {
+          "max_ms": 22813.99429200974,
+          "mean_ms": 4322.4579531988575,
+          "min_ms": 97.9922390106367,
+          "p50_ms": 4262.60604399431,
+          "p90_ms": 5723.281288999715,
+          "p99_ms": 7575.569230000838
+        },
+        "nic_rx_bytes_delta": {
+          "enp157s0np0.rx_bytes": 26906,
+          "enp27s0np0.rx_bytes": 727145593368
+        },
+        "ops": 2304,
+        "ops_per_s": 39.24668418170247,
+        "processes": 24,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 0.0,
+          "rdma_read_ops": 0.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "size_bytes": 268435456,
+        "throughput_gbps_bytes": 10.53520156480329,
+        "throughput_gbps_steady": 20.328524038772137,
+        "wall_s": 58.705596358995535,
+        "worker_wall_s": [
+          26.35228746199573,
+          27.434259178000502,
+          27.341490150996833,
+          27.62876227599918,
+          27.561438706994522,
+          27.452533632997074,
+          27.182642878004117,
+          27.418119321999256,
+          30.424013540992746,
+          27.401484002999496,
+          27.366771189001156,
+          27.470686536005815,
+          27.482165168010397,
+          27.37661263300106,
+          27.40476663901063,
+          27.35275402799016,
+          27.42351804699865,
+          27.379919635000988,
+          26.662547842002823,
+          27.265569142997265,
+          27.518864159996156,
+          27.3530026019871,
+          27.48575805600558,
+          27.23353573800705
+        ]
+      },
+      {
+        "concurrency": 32,
+        "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 0 has a total capacity of 139.80 GiB of which 87.19 MiB is free. Process 123805 has 614.00 MiB memory in use. Process 132829 has 8.51 GiB memory in use. Process 132815 has 8.51 GiB memory in use. Process 132816 has 8.51 GiB memory in use. Process 132835 has 7.01 GiB memory in use. Process 132825 has 8.51 GiB memory in use. Process 132833 has 522.00 MiB memory in use. Process 132823 has 8.01 GiB memory in use. Process 132818 has 16.00 MiB memory in use. Process 132834 has 8.51 GiB memory in use. Process 132819 has 8.51 GiB memory in use. Process 132832 has 778.00 MiB memory in use. Process 132821 has 16.00 MiB memory in use. Process 132826 has 8.51 GiB memory in use. Process 132837 has 8.51 GiB memory in use. Process 132827 has 16.00 MiB memory in use. Process 132817 has 7.26 GiB memory in use. Process 132822 has 8.51 GiB memory in use. Process 132831 has 7.76 GiB memory in use. Including non-PyTorch memory, this process has 5.26 GiB memory in use. Process 132836 has 8.51 GiB memory in use. Process 132830 has 16.00 MiB memory in use. Process 132820 has 16.00 MiB memory in use. Process 132824 has 8.51 GiB memory in use. Process 132828 has 8.51 GiB memory in use. Of the allocated memory 4.75 GiB is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)",
+        "size_bytes": 268435456
+      }
+    ],
+    "failures": 1,
+    "peak_cell": {
+      "concurrency": 16,
+      "size_bytes": 268435456
+    },
+    "peak_gbps_bytes": 10.53520156480329
+  },
+  "timestamp": "2026-08-18T23:17:00+0000"
+}

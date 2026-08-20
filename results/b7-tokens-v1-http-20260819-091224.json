@@ -1,0 +1,106 @@
+{
+  "backend": "http",
+  "benchmark": "b7-tokens-v1",
+  "environment": {
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "assumed_mfu": 0.45,
+    "batch_seqs": 64,
+    "bucket": "llm-tokens",
+    "endpoints": [
+      "aistor1:9000",
+      "aistor2:9000"
+    ],
+    "fetch_workers": 4,
+    "steps": 3000,
+    "warmup": 20
+  },
+  "rdma_witness": {
+    "metrics_unreachable": [],
+    "rdma_read_bytes": 0.0,
+    "rdma_read_ops": 0.0,
+    "rdma_write_bytes": 0.0,
+    "rdma_write_ops": 0.0
+  },
+  "results": {
+    "bytes": 2147483648,
+    "cpu_cores": 3.2120614201512736,
+    "fetch_wait_s": 2.8987007681280375e-05,
+    "gbps": 1.4202317412202945,
+    "implied_gpu_capacity": {
+      "405B (dense)": {
+        "gpus_feedable": 2839801.5632613995,
+        "tokens_s_per_gpu": 183.14814814814815
+      },
+      "DeepSeek-V3-class MoE (37B active of 671B)": {
+        "gpus_feedable": 259438.66133499204,
+        "tokens_s_per_gpu": 2004.7297297297298
+      },
+      "Llama-3 70B (dense)": {
+        "gpus_feedable": 490829.89982295793,
+        "tokens_s_per_gpu": 1059.642857142857
+      },
+      "Llama-3 8B (dense)": {
+        "gpus_feedable": 56094.84569405233,
+        "tokens_s_per_gpu": 9271.875
+      }
+    },
+    "median_step_ms": 0.03756849037017673,
+    "shards": 3,
+    "tokens_per_s": 520104397.4195415,
+    "wall_s": 1.5120656620129012
+  },
+  "timestamp": "2026-08-19T09:12:24+0000"
+}

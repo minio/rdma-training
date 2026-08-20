@@ -1,0 +1,40 @@
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+W0819 00:34:23.275000 186132 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] 
+W0819 00:34:23.275000 186132 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] *****************************************
+W0819 00:34:23.275000 186132 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0819 00:34:23.275000 186132 .venv/lib/python3.12/site-packages/torch/distributed/run.py:874] *****************************************
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:64: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/minio/ai-training/.venv/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+
+==============================================================================
+B2 loader-only | backend=http layout=raw gpus=8 batch=256/gpu
+==============================================================================
+  seconds for 2524 batches : 40.77 s
+  images/s                        : 124665
+  median step time                : 0.2 ms
+  storage read                    : 926.4 GiB @ 24.92 GB/s
+  time blocked on storage         : 0.02 s (0.0% of wall)
+  host CPU                        : 22.5 cores
+  server RDMA bytes               : 0
+  fabric errors                   : 0
+  shards read in window           : 1236
+  rank0 breakdown                 : fetch_wait 0.01s | decode 0.00s | augment 37.11s | compute 3.14s
+
+saved: results/b3-resnet50-b2-ddp8-http-20260819-003523.json

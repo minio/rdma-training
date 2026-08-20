@@ -1,0 +1,104 @@
+{
+  "backend": "local-then-load",
+  "benchmark": "b8-weights-llama8b-coldcache",
+  "environment": {
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "bucket": "model-weights",
+    "concurrency": 8,
+    "device": "cuda:0",
+    "endpoints": [
+      "aistor1:9000",
+      "aistor2:9000"
+    ],
+    "model": "llama-3.1-8b-instruct",
+    "repeats": 1,
+    "shard_bytes": [
+      4999802720,
+      4976698672,
+      4915916176,
+      1168138808
+    ],
+    "window_mib": 1024
+  },
+  "rdma_witness": {},
+  "results": {
+    "rows": [
+      {
+        "backend": "local-then-load",
+        "cores_median": 0.882,
+        "gbps_median": 2.556890117020134,
+        "runs": [
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.00345,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 0.882,
+            "gbps": 2.556890117020134,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "shards": 4,
+            "wall_s": 6.281272077001631
+          }
+        ],
+        "verified": null,
+        "wall_s_max": 6.281272077001631,
+        "wall_s_median": 6.281272077001631,
+        "wall_s_min": 6.281272077001631
+      }
+    ]
+  },
+  "timestamp": "2026-08-19T19:09:00+0000"
+}

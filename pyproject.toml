@@ -1,0 +1,51 @@
+[project]
+name = "s3rdma-train"
+version = "0.1.0"
+description = "Benchmarks comparing MinIO AIStor GPU-Direct S3-over-RDMA against S3-over-HTTP for PyTorch training and checkpointing"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+
+# torch/torchvision are intentionally NOT pinned here: they must come from the
+# CUDA-specific index that matches your driver, which a plain dependency cannot
+# express. scripts/setup/10-client-env.sh installs them from
+# https://download.pytorch.org/whl/<cuXXX> and then installs the rest from PyPI.
+dependencies = [
+    "minio>=7.2",
+    "numpy>=1.26",
+    "boto3>=1.34",
+    "nvidia-ml-py>=12.0",
+    "psutil>=5.9",
+    "requests>=2.31",
+    "tabulate>=0.9",
+    # Reference reader for the weight-loading benchmark: we verify our own
+    # safetensors parsing against it rather than trusting it.
+    "safetensors>=0.4",
+    "huggingface_hub>=0.24",
+]
+
+[project.optional-dependencies]
+# GPU JPEG decode for the `jpeg` shard layout. torchvision covers this already;
+# nvimgcodec is only needed if you want to experiment with alternative decoders.
+decode = ["nvidia-nvimgcodec-cu13>=0.9"]
+dev = ["py-spy>=0.3"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+# Deliberate: the RDMA client and benchmarks import torch lazily or after
+# environment setup, and several modules import inside functions to keep optional
+# dependencies optional.
+ignore = ["E501", "B008"]

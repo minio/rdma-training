@@ -1,0 +1,344 @@
+{
+  "backend": "http",
+  "benchmark": "b1-fetch-mp8",
+  "environment": {
+    "cpu_count": 256,
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "bucket": "bench-fetch",
+    "concurrency": [
+      8,
+      16
+    ],
+    "device": "cuda:0",
+    "endpoints": [
+      "aistor1:9000",
+      "aistor2:9000"
+    ],
+    "http_parts": 8,
+    "http_threads": 32,
+    "iters_per_stream": 4,
+    "objects_per_size": 64,
+    "processes": 8,
+    "sizes_mib": [
+      64,
+      256
+    ]
+  },
+  "rdma_witness": {},
+  "results": {
+    "cells": [
+      {
+        "bytes": 17179869184,
+        "concurrency": 8,
+        "cpu_busy_fraction": 0.04362,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 11.166,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "gb_per_cpu_core": 0.19852742467840967,
+        "iters_per_stream": 4,
+        "latency": {
+          "max_ms": 565.9261410037288,
+          "mean_ms": 308.6802632182071,
+          "min_ms": 66.74673699308187,
+          "p50_ms": 318.02461300685536,
+          "p90_ms": 415.3449589939555,
+          "p99_ms": 541.140594999888
+        },
+        "nic_rx_bytes_delta": {
+          "enp157s0np0.rx_bytes": 3480,
+          "enp27s0np0.rx_bytes": 21641600407
+        },
+        "ops": 256,
+        "ops_per_s": 33.03127933705662,
+        "processes": 8,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 0.0,
+          "rdma_read_ops": 0.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "size_bytes": 67108864,
+        "throughput_gbps_bytes": 2.2166916327765427,
+        "throughput_gbps_steady": 11.819271069143435,
+        "wall_s": 7.750229634999414,
+        "worker_wall_s": [
+          1.1435560999962036,
+          1.2472556599968811,
+          1.453547268989496,
+          1.3074695590039482,
+          1.33007971799816,
+          1.296822603995679,
+          1.3289964979921933,
+          1.269163032004144
+        ]
+      },
+      {
+        "bytes": 34359738368,
+        "concurrency": 16,
+        "cpu_busy_fraction": 0.04798,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 12.283,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "gb_per_cpu_core": 0.2897550845907626,
+        "iters_per_stream": 4,
+        "latency": {
+          "max_ms": 1799.4604949926725,
+          "mean_ms": 603.5345354260642,
+          "min_ms": 48.781215999042615,
+          "p50_ms": 575.2522270049667,
+          "p90_ms": 925.4565409937641,
+          "p99_ms": 1313.0075189983472
+        },
+        "nic_rx_bytes_delta": {
+          "enp157s0np0.rx_bytes": 3360,
+          "enp27s0np0.rx_bytes": 43283847582
+        },
+        "ops": 512,
+        "ops_per_s": 53.03245650874287,
+        "processes": 8,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 0.0,
+          "rdma_read_ops": 0.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "size_bytes": 67108864,
+        "throughput_gbps_bytes": 3.5589479114311398,
+        "throughput_gbps_steady": 12.039344276844268,
+        "wall_s": 9.654465089988662,
+        "worker_wall_s": [
+          2.8539542999933474,
+          2.7594598189898534,
+          2.830398799997056,
+          2.804324754004483,
+          2.818892045004759,
+          2.7740351849934086,
+          2.787389446995803,
+          2.768350147991441
+        ]
+      },
+      {
+        "bytes": 68719476736,
+        "concurrency": 8,
+        "cpu_busy_fraction": 0.05412,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 13.854,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "gb_per_cpu_core": 0.4069393976402548,
+        "iters_per_stream": 4,
+        "latency": {
+          "max_ms": 1824.3967489979696,
+          "mean_ms": 891.9369610818535,
+          "min_ms": 105.30676499183755,
+          "p50_ms": 919.6622370072873,
+          "p90_ms": 1177.4988830002258,
+          "p99_ms": 1475.14772300201
+        },
+        "nic_rx_bytes_delta": {
+          "enp157s0np0.rx_bytes": 5503,
+          "enp27s0np0.rx_bytes": 86556545624
+        },
+        "ops": 256,
+        "ops_per_s": 21.002039534472903,
+        "processes": 8,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 0.0,
+          "rdma_read_ops": 0.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "size_bytes": 268435456,
+        "throughput_gbps_bytes": 5.637692059366262,
+        "throughput_gbps_steady": 17.301816948918113,
+        "wall_s": 12.189292358001694,
+        "worker_wall_s": [
+          3.382233158990857,
+          3.9718069459922845,
+          3.793842912011314,
+          3.8715190950024407,
+          3.794434376002755,
+          3.750993080000626,
+          3.677191135007888,
+          3.5866362810047576
+        ]
+      },
+      {
+        "bytes": 137438953472,
+        "concurrency": 16,
+        "cpu_busy_fraction": 0.06017,
+        "cpu_cores_total": 256,
+        "cpu_cores_used": 15.404,
+        "fabric_health": {
+          "mlx5_0": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          },
+          "mlx5_1": {
+            "local_ack_timeout_err": 0,
+            "out_of_buffer": 0,
+            "packet_seq_err": 0,
+            "req_cqe_error": 0,
+            "resp_cqe_error": 0,
+            "rnr_nak_retry_err": 0
+          }
+        },
+        "gb_per_cpu_core": 0.46484653293589634,
+        "iters_per_stream": 4,
+        "latency": {
+          "max_ms": 3724.43401000055,
+          "mean_ms": 1843.8793162421803,
+          "min_ms": 195.77287600259297,
+          "p50_ms": 1797.0587379968492,
+          "p90_ms": 2686.195663001854,
+          "p99_ms": 3428.8069320027716
+        },
+        "nic_rx_bytes_delta": {
+          "enp157s0np0.rx_bytes": 8280,
+          "enp27s0np0.rx_bytes": 173126029394
+        },
+        "ops": 512,
+        "ops_per_s": 26.674888555044287,
+        "processes": 8,
+        "rdma_witness": {
+          "metrics_unreachable": [],
+          "rdma_read_bytes": 0.0,
+          "rdma_read_ops": 0.0,
+          "rdma_write_bytes": 0.0,
+          "rdma_write_ops": 0.0
+        },
+        "size_bytes": 268435456,
+        "throughput_gbps_bytes": 7.160485873022495,
+        "throughput_gbps_steady": 16.635193850876068,
+        "wall_s": 19.194082064990653,
+        "worker_wall_s": [
+          8.018100601999322,
+          7.883993158000521,
+          7.942984018998686,
+          8.053384404993267,
+          8.261938796989853,
+          7.932680186000653,
+          7.910959106011433,
+          8.217870494001545
+        ]
+      }
+    ],
+    "failures": 0,
+    "peak_cell": {
+      "concurrency": 16,
+      "size_bytes": 268435456
+    },
+    "peak_gbps_bytes": 7.160485873022495
+  },
+  "timestamp": "2026-08-18T23:13:21+0000"
+}

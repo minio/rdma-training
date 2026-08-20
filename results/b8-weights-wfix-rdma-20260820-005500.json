@@ -1,0 +1,131 @@
+{
+  "backend": "rdma",
+  "benchmark": "b8-weights-wfix",
+  "environment": {
+    "gpus": [
+      {
+        "driver": "580.173.02",
+        "index": 0,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 1,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 2,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 3,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 4,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 5,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 6,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      },
+      {
+        "driver": "580.173.02",
+        "index": 7,
+        "memory_mib": 143771,
+        "name": "NVIDIA H200"
+      }
+    ],
+    "torch": "2.13.0+cu130"
+  },
+  "host": "gpu-4",
+  "params": {
+    "bucket": "model-weights",
+    "concurrency": 8,
+    "device": "cuda:0",
+    "endpoints": [
+      "aistor1:9000",
+      "aistor2:9000"
+    ],
+    "model": "llama-3.1-8b-instruct",
+    "repeats": 2,
+    "shard_bytes": [
+      4999802720,
+      4976698672,
+      4915916176,
+      1168138808
+    ],
+    "window_mib": 1024
+  },
+  "rdma_witness": {},
+  "results": {
+    "rows": [
+      {
+        "backend": "rdma",
+        "cores_median": 0.135,
+        "gbps_median": 22.86424082622632,
+        "runs": [
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.00055,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 0.141,
+            "gbps": 22.705382680126576,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 16060522496.0,
+              "rdma_read_ops": 17.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 4,
+            "wall_s": 0.707344277005177,
+            "windows_total": 17
+          },
+          {
+            "bytes": 16060522496,
+            "cpu_busy_fraction": 0.0005,
+            "cpu_cores_total": 256,
+            "cpu_cores_used": 0.129,
+            "gbps": 23.023098972326068,
+            "num_tensors": 291,
+            "peak_vram_bytes": 16060522496,
+            "rdma_witness": {
+              "metrics_unreachable": [],
+              "rdma_read_bytes": 16060522496.0,
+              "rdma_read_ops": 17.0,
+              "rdma_write_bytes": 0.0,
+              "rdma_write_ops": 0.0
+            },
+            "shards": 4,
+            "wall_s": 0.6975830019800924,
+            "windows_total": 17
+          }
+        ],
+        "verified": null,
+        "wall_s_max": 0.707344277005177,
+        "wall_s_median": 0.7024636394926347,
+        "wall_s_min": 0.6975830019800924
+      }
+    ]
+  },
+  "timestamp": "2026-08-20T00:55:00+0000"
+}
