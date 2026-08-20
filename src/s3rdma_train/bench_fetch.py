@@ -23,6 +23,7 @@ byte counters did not move, because libminiocpp falls back to HTTP silently.
 from __future__ import annotations
 
 import argparse
+import os
 import statistics
 import sys
 import time
@@ -402,7 +403,10 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--objects", type=int, default=64, help="distinct objects per size")
     ap.add_argument("--device", default="cuda:0")
     ap.add_argument("--servers", default="aistor1:9000,aistor2:9000")
-    ap.add_argument("--nics", default="enp27s0np0,enp157s0np0")
+    # Comma-separated netdev names whose rx/tx byte counters are recorded next to
+    # each cell (e.g. "eth0,eth1"). Reporting only -- it never affects the numbers.
+    # Leave unset to skip fabric counters.
+    ap.add_argument("--nics", default=os.environ.get("RDMA_NICS", ""))
     ap.add_argument("--http-parts", type=int, default=8)
     ap.add_argument("--http-threads", type=int, default=32)
     ap.add_argument("--local-root", default="")

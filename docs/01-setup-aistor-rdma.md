@@ -49,12 +49,24 @@ MinIO expands **one** server-pool argument with an ellipsis. Two separate argume
 create two *pools*, and a single-node pool cannot stripe its erasure sets across
 hosts — you lose roughly half the aggregate throughput.
 
-Our nodes are `coe02` and `coe04`, and `coe{02...04}` would pull in `coe03`. So
-`scripts/setup/03-configure-hosts.sh` adds contiguous aliases:
+Real host names are rarely contiguous. If yours are `node02` and `node04`, then
+`node{02...04}` expands to include a `node03` you may not even own. So
+`scripts/setup/03-configure-hosts.sh` maps your two nodes onto contiguous aliases:
+
+```bash
+AISTOR1_RAIL0=10.0.0.11 AISTOR2_RAIL0=10.0.0.12 \
+AISTOR1_RAIL1=10.0.1.11 AISTOR2_RAIL1=10.0.1.12 \
+    scripts/setup/03-configure-hosts.sh
+```
+
+The `RAIL1` pair is optional -- set it only if your NICs are dual-railed. That
+writes into `/etc/hosts`:
 
 ```
-15.15.15.39   aistor1
-15.15.15.107  aistor2
+10.0.0.11   aistor1 aistor1.rail0
+10.0.0.12   aistor2 aistor2.rail0
+10.0.1.11   aistor1.rail1
+10.0.1.12   aistor2.rail1
 ```
 
 giving a single argument covering all 48 drives:

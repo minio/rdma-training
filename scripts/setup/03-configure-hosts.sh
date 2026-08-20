@@ -6,9 +6,9 @@
 #
 # Why aliases rather than real hostnames: MinIO expands one server-pool argument
 # with an ellipsis (`http://host{1...2}/...`), so the node names must be
-# contiguous. Our own two nodes were named coe02 and coe04, and `coe{02...04}`
-# would have expanded to coe02, coe03, coe04 -- pulling in a third machine we do
-# not own. Writing two separate arguments instead would create two single-node
+# contiguous. Real host names rarely are: given nodes named node02 and node04,
+# `node{02...04}` expands to node02, node03, node04 -- pulling in a third machine
+# you may not own. Writing two separate arguments instead would create two single-node
 # pools, so erasure sets would not stripe across nodes and we would lose half the
 # aggregate throughput. Contiguous aliases give us one pool spanning both nodes.
 #

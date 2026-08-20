@@ -59,7 +59,7 @@ MINIO_OPTS="--address :9000 --console-address :9001 --license $LICENSE_FILE"
 MINIO_ERASURE_SET_DRIVE_COUNT=16
 
 # ---- RDMA ----
-# Inter-node RDMA: erasure shard traffic between coe02 and coe04 moves over RoCE
+# Inter-node RDMA: erasure shard traffic between the storage nodes moves over RoCE
 # instead of TCP. Independent of the client-facing GPU-Direct path, which is
 # always available on this build and is negotiated per request via the
 # x-amz-rdma-token header.

@@ -237,7 +237,8 @@ will either silently fall back to HTTP or segfault —
 scripts/setup/01-stop-memkv.sh          # stop whatever is using the drives
 scripts/setup/02-format-drives.sh       # dry run: lists what it would wipe
 scripts/setup/02-format-drives.sh --apply
-scripts/setup/03-configure-hosts.sh     # also run on the client
+AISTOR1_RAIL0=<ip> AISTOR2_RAIL0=<ip> \
+    scripts/setup/03-configure-hosts.sh # also run on the client
 scripts/setup/04-roce-lossless.sh --install-service   # also on the client
 scripts/setup/05-install-aistor.sh
 MINIO_LICENSE="$(cat minio.license)" scripts/setup/06-start-aistor.sh
